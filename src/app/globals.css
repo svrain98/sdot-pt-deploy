@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ────────────────────────────────────────────────
+ * sdot-pt2 전역 스타일
+ * 18theses.com (Palantir) 레퍼런스 — 순수 블랙 + 올리브 그린
+ * ──────────────────────────────────────────────── */
+:root {
+  --bg-outer: #000000;
+  --bg-slide: #000000;
+  --bg-panel: #222223;
+  --fg: #f4f4e4;
+  --fg-muted: #d1d0c1;
+  --fg-dim: #6a6a5e;
+  --border: #333332;
+  --border-subtle: rgba(244, 244, 228, 0.08);
+  --accent: #758c58;
+  --accent-light: #8fa870;
+  --accent-dim: #4a5a38;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-outer);
+  color: var(--fg);
+  font-family: "Pretendard Variable", "Pretendard", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 슬라이드 고정 1920×1080 컨테이너 */
+.slide-stage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1920px;
+  height: 1080px;
+  transform-origin: center center;
+  background: var(--bg-slide);
+}
+
+.slide-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg-slide);
+}
+
+/* 스크롤바 숨김 */
+*::-webkit-scrollbar {
+  display: none;
+}
+* {
+  scrollbar-width: none;
+}
+
+/* 텍스트 선택 방지 */
+.slide-frame {
+  user-select: none;
+}
+
+.slide-frame *:focus {
+  outline: none;
+}

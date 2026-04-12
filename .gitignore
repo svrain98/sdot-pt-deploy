@@ -1,0 +1,45 @@
+# deps
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# build
+.next/
+out/
+build/
+dist/
+
+# env
+.env*.local
+.env
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# misc
+.DS_Store
+*.pem
+.vscode/
+.idea/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# 대용량 발표 에셋 — 리포에 포함하지 않음, scripts/copy-assets.sh 로 재구성
+public/videos/*.mp4
+public/videos/*.mov
+public/videos/*.webm
+public/images/figures/*.png
+public/images/figures/*.svg
+public/images/thumbnails/*.jpg
+public/images/palantir_objects.png
+public/images/mon_graph.svg
+public/images/decision_card_ui.png
+public/data/compression_stats.json
+public/data/triples_sample.jsonld
+public/data/decision_points.json
+public/data/c2_status.json
