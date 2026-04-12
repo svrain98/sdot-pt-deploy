@@ -11,7 +11,7 @@ export const VIDEO = {
   S03_GLITCH: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/d011a41ae7288ce82fe0dfa07ed28172/manifest/video.m3u8",
   S06_DRONE_FEED: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/8f3231dd7c8e0a3220a3126fbd50868f/manifest/video.m3u8",
   S09_NIGHT_SURVEILLANCE: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/69599729a7f2381f11ed5af551932aea/manifest/video.m3u8",
-  S10_UA_DASHBOARD: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/572f2bde3a063d690e0e4d891ecf2795/manifest/video.m3u8",
+  S10_UA_DASHBOARD: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/ff2f60d4a7b88dbe5d15c2f1e4faac40/manifest/video.m3u8",
 } as const;
 
 export const IMAGE = {

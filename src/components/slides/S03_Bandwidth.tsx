@@ -23,38 +23,11 @@ export default function S03_Bandwidth({ meta, active, step }: SlideProps) {
         </div>
 
         <div className="mt-10 grid flex-1 grid-cols-2 gap-10">
-          {/* 좌: 이상적인 고화질 */}
+          {/* 좌: 실제 전술망 */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={active ? { opacity: 1, x: 0 } : { opacity: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col"
-          >
-            <div className="mb-3 flex items-center justify-between">
-              <div className="text-[20px] font-medium uppercase tracking-label text-accent">
-                ● 이론적 요구량
-              </div>
-              <div className="text-[32px] font-extrabold text-accent">
-                20+ Mbps
-              </div>
-            </div>
-            <div className="relative aspect-video w-full overflow-hidden rounded border border-border">
-              <HlsVideo src={VIDEO.MAIN} />
-            </div>
-            <p className="mt-3 text-[18px] text-fg-muted">
-              4K EO/IR · 드론 무인차량 실시간 스트림 · 광대역 필수
-            </p>
-          </motion.div>
-
-          {/* 우: 실제 전술망 — step >= 1 에서 등장 */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={
-              active && step >= 1
-                ? { opacity: 1, x: 0 }
-                : { opacity: 0, x: 20 }
-            }
-            transition={{ duration: 0.8 }}
             className="flex flex-col"
           >
             <div className="mb-3 flex items-center justify-between">
@@ -73,6 +46,33 @@ export default function S03_Bandwidth({ meta, active, step }: SlideProps) {
             </div>
             <p className="mt-3 text-[18px] text-fg-muted">
               P-999K 데이터 모드 · 헤더 오버헤드 · 전자전 취약
+            </p>
+          </motion.div>
+
+          {/* 우: 이론적 요구량 — step >= 1 에서 등장 */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={
+              active && step >= 1
+                ? { opacity: 1, x: 0 }
+                : { opacity: 0, x: 20 }
+            }
+            transition={{ duration: 0.8 }}
+            className="flex flex-col"
+          >
+            <div className="mb-3 flex items-center justify-between">
+              <div className="text-[20px] font-medium uppercase tracking-label text-accent">
+                ● 이론적 요구량
+              </div>
+              <div className="text-[32px] font-extrabold text-accent">
+                20+ Mbps
+              </div>
+            </div>
+            <div className="relative aspect-video w-full overflow-hidden rounded border border-border">
+              <HlsVideo src={VIDEO.MAIN} />
+            </div>
+            <p className="mt-3 text-[18px] text-fg-muted">
+              4K EO/IR · 드론 무인차량 실시간 스트림 · 광대역 필수
             </p>
           </motion.div>
         </div>

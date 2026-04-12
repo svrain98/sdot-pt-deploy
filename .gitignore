@@ -37,7 +37,6 @@ public/images/figures/*.png
 public/images/figures/*.svg
 public/images/thumbnails/*.jpg
 public/images/palantir_objects.png
-public/images/mon_graph.svg
 public/images/decision_card_ui.png
 public/data/compression_stats.json
 public/data/triples_sample.jsonld
