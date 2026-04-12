@@ -3,9 +3,8 @@
 import { motion } from "framer-motion";
 import SlideFrame from "@/components/deck/SlideFrame";
 import SplitCompare from "@/components/effects/SplitCompare";
-import PlaceholderMedia from "@/components/effects/PlaceholderMedia";
 import HlsVideo from "@/components/effects/HlsVideo";
-import { IMAGE, VIDEO } from "@/lib/assets";
+import { VIDEO } from "@/lib/assets";
 import type { SlideProps } from "@/types/slide";
 
 // 10 — 1파→2파 반복의 이유: 러시아 C2 한계 vs 우크라이나 S-DOT 즉시 결심
@@ -52,13 +51,7 @@ export default function S10_RU_vs_UA({ meta, active, step }: SlideProps) {
             }
             right={
               <div className="relative h-full w-full bg-black">
-                <PlaceholderMedia
-                  slot="S10_ua_sdot_dashboard"
-                  kind="image"
-                  src={IMAGE.UA_SDOT_DASHBOARD}
-                  caption="S-DOT DECISION SUPPORT 대시보드 — 별도 프론트 캡처"
-                  fit="cover"
-                />
+                <HlsVideo src={VIDEO.S10_UA_DASHBOARD} />
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={

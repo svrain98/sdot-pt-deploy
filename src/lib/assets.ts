@@ -8,9 +8,10 @@ export const VIDEO = {
   MAIN_02: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/b89186f83b057747091ec97ad55fb5ec/manifest/video.m3u8",
   PALANTIR_OBJECT: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/6381ae76719fb5ec750c0796b4a80b3c/manifest/video.m3u8",
   PALANTIR_DASHBOARD: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/49e924a0a939c83417c63fac93d70e2d/manifest/video.m3u8",
-  S03_GLITCH: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/69599729a7f2381f11ed5af551932aea/manifest/video.m3u8",
+  S03_GLITCH: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/d011a41ae7288ce82fe0dfa07ed28172/manifest/video.m3u8",
   S06_DRONE_FEED: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/8f3231dd7c8e0a3220a3126fbd50868f/manifest/video.m3u8",
   S09_NIGHT_SURVEILLANCE: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/69599729a7f2381f11ed5af551932aea/manifest/video.m3u8",
+  S10_UA_DASHBOARD: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/572f2bde3a063d690e0e4d891ecf2795/manifest/video.m3u8",
 } as const;
 
 export const IMAGE = {
