@@ -49,16 +49,16 @@ export default function CompressionBar({
 
       {/* 게이지 막대 */}
       <div className="relative h-12 w-full overflow-hidden rounded border border-border-subtle bg-black">
-        {/* raw = full width 회색 막대 */}
+        {/* raw = full width → 오른쪽으로 줄어듦 */}
         <motion.div
-          className="absolute inset-y-0 left-0 bg-fg-dim"
+          className="absolute inset-y-0 right-0 bg-fg-dim"
           initial={{ width: "100%" }}
           animate={{ width: active ? `${afterWidth}%` : "100%" }}
           transition={{ duration: 1.6, ease: "easeOut" }}
         />
-        {/* semantic = 아주 작은 악센트 마커 */}
+        {/* semantic = 아주 작은 악센트 마커 (우측 끝) */}
         <motion.div
-          className="absolute inset-y-0 left-0 bg-accent"
+          className="absolute inset-y-0 right-0 bg-accent"
           style={{ width: `${afterWidth}%` }}
           initial={{ opacity: 0 }}
           animate={{ opacity: active ? 1 : 0 }}
