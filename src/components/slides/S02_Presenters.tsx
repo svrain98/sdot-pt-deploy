@@ -7,10 +7,10 @@ import type { SlideProps } from "@/types/slide";
 
 // 02 — 발표자 소개: 4인 카드 그리드
 const PRESENTERS = [
-  { slot: "S02_presenter_1", name: "발표자 1", role: "역할" },
-  { slot: "S02_presenter_2", name: "발표자 2", role: "역할" },
-  { slot: "S02_presenter_3", name: "발표자 3", role: "역할" },
-  { slot: "S02_presenter_4", name: "발표자 4", role: "역할" },
+  { slot: "S02_presenter_1", name: "이선경", org: "육군정보통신학교 교관", role: "아이디어 제안" },
+  { slot: "S02_presenter_2", name: "박민규", org: "모프시스템즈 CEO", role: "프로젝트 리드" },
+  { slot: "S02_presenter_3", name: "박윤서", org: "모프시스템즈 엔지니어", role: "시스템 개발" },
+  { slot: "S02_presenter_4", name: "최강근", org: "익시드테크", role: "전술 지원 및 개발" },
 ];
 
 export default function S02_Presenters({ meta, active, step }: SlideProps) {
@@ -37,20 +37,22 @@ export default function S02_Presenters({ meta, active, step }: SlideProps) {
               transition={{ duration: 0.6, delay: i * 0.15 }}
               className="bg-bg-panel rounded-card border border-border p-6 flex flex-col"
             >
-              {/* 사진 영역 */}
-              <div className="h-[200px] w-full overflow-hidden rounded-card">
+              {/* 사진 영역 — 3:4 세로 프로필 */}
+              <div className="relative w-full overflow-hidden rounded-card" style={{ aspectRatio: "3/4" }}>
                 <PlaceholderMedia
                   slot={p.slot}
                   kind="image"
-                  caption={`${p.name} 사진`}
+                  caption={`${p.name} 프로필 사진 (3:4)`}
                   className="h-full w-full"
                   fit="cover"
                 />
               </div>
               {/* 이름 */}
-              <p className="mt-4 text-[20px] font-bold text-fg">{p.name}</p>
+              <p className="mt-5 text-[24px] font-bold text-fg">{p.name}</p>
+              {/* 소속 */}
+              <p className="mt-1 text-[20px] text-fg-muted">{p.org}</p>
               {/* 역할 */}
-              <p className="mt-1 text-[20px] text-fg-muted">{p.role}</p>
+              <p className="mt-1 text-[20px] text-accent">{p.role}</p>
             </motion.div>
           ))}
         </div>
