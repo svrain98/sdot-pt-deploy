@@ -3,8 +3,9 @@
 import { motion } from "framer-motion";
 import SlideFrame from "@/components/deck/SlideFrame";
 import SplitCompare from "@/components/effects/SplitCompare";
+import PlaceholderMedia from "@/components/effects/PlaceholderMedia";
 import HlsVideo from "@/components/effects/HlsVideo";
-import { VIDEO } from "@/lib/assets";
+import { IMAGE, VIDEO } from "@/lib/assets";
 import type { SlideProps } from "@/types/slide";
 
 // 10 — 1파→2파 반복의 이유: 러시아 C2 한계 vs 우크라이나 S-DOT 즉시 결심

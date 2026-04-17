@@ -4,12 +4,11 @@ import { motion } from "framer-motion";
 import SlideFrame from "@/components/deck/SlideFrame";
 import type { SlideProps } from "@/types/slide";
 
-// 02 — 문제제기: 전장 네트워크가 AI의 가장 큰 장애
-// 3개 카드(대역폭/차폐/전자전) 순차 등장
+// 04 — 전장 네트워크의 구조적 한계: SAMS 인용바 + 3카드
 const PROBLEMS = [
   {
     title: "전술망 대역폭 한계",
-    subtitle: "TICN · 전투무선망 · P-999K",
+    subtitle: "TICN · 전투무선망",
     body: "드론·로봇 고해상도 감시장비 폭증 vs. 최저 9.6 Kbps 데이터 모드",
   },
   {
@@ -18,18 +17,42 @@ const PROBLEMS = [
     body: "전송 지연, 화질 저하, 단절 — 안정적 네트워크 유지 불가",
   },
   {
-    title: "전자전 (Electronic Warfare)",
-    subtitle: "Jamming · Spoofing",
-    body: "재밍 상황에서 원활한 데이터 전송 제한 — AI 활용의 가장 큰 장애",
+    title: "정보 과부하 (Cognitive Overload)",
+    subtitle: "다수 센서 · 동시 전송",
+    body: "수십 대 센서 동시 전송 → 실시간 처리 불가. 선별 전달 구조 필수",
   },
 ];
 
-export default function S02_Problem({ meta, active, step }: SlideProps) {
+export default function S04_Problem({ meta, active, step }: SlideProps) {
   return (
     <SlideFrame meta={meta}>
-      <div className="flex h-full w-full flex-col px-[140px] pt-[140px] pb-[120px]">
+      <div className="flex h-full w-full flex-col px-[140px] pt-[100px] pb-[120px]">
+        {/* SAMS 인용 바 — 최상단 */}
+        <motion.div
+          className="mb-10 bg-bg-panel rounded-card border border-accent/30 p-6"
+          initial={{ opacity: 0, y: -20 }}
+          animate={active ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="flex items-start gap-4">
+            <span className="shrink-0 border border-accent/50 rounded px-2 py-0.5 text-[13px] font-semibold uppercase tracking-label text-accent">
+              2024 SAMS Best Monograph
+            </span>
+            <div>
+              <p className="text-[20px] text-fg leading-[1.6]">
+                &ldquo;전술 제대의 대역폭은 최신 AI 플랫폼 요구량(3.6Tbps)에 턱없이 부족하다.
+                해법 중 하나는 로컬에서 압축·정제 후 핵심만 전달하는 것이다.&rdquo;
+              </p>
+              <p className="mt-2 text-[16px] font-medium uppercase tracking-label text-fg-dim">
+                — Adler, Military Review (2025)
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
         <Header />
-        <div className="mt-14 grid flex-1 grid-cols-3 gap-10">
+
+        <div className="mt-10 grid flex-1 grid-cols-3 gap-10">
           {PROBLEMS.map((p, i) => (
             <motion.div
               key={p.title}
@@ -57,23 +80,6 @@ export default function S02_Problem({ meta, active, step }: SlideProps) {
             </motion.div>
           ))}
         </div>
-
-        {/* 하단 인용 */}
-        <motion.div
-          className="mt-10"
-          initial={{ opacity: 0 }}
-          animate={active && step >= 2 ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <div className="border-l-2 border-accent pl-6">
-            <p className="text-[24px] text-fg">
-              &ldquo;AI 기술 자체보다 전장 네트워크 환경이 가장 큰 장애요소&rdquo;
-            </p>
-            <p className="mt-2 text-[px] font-medium uppercase tracking-label text-fg-dim">
-              — U.S. Army, Modernizing Military Decision-Making (2025)
-            </p>
-          </div>
-        </motion.div>
       </div>
     </SlideFrame>
   );
@@ -83,11 +89,11 @@ function Header() {
   return (
     <div>
       <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[15px] font-medium uppercase tracking-label text-accent">
-        Problem · 제안 배경
+        CHALLENGE · 전장 네트워크의 구조적 한계
       </div>
       <h2 className="mt-4 text-[64px] font-black tracking-heading text-fg leading-[1.1]">
-        전장 네트워크가{" "}
-        <span className="text-accent">AI의 가장 큰 장애</span>
+        전장 네트워크의{" "}
+        <span className="text-accent">구조적 한계</span>
       </h2>
     </div>
   );

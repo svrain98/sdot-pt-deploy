@@ -2,34 +2,44 @@ import type { ComponentType } from "react";
 import type { SlideProps } from "@/types/slide";
 
 import S01_Title from "./S01_Title";
-import S02_Problem from "./S02_Problem";
-import S03_Bandwidth from "./S03_Bandwidth";
-import S04_Paradigm from "./S04_Paradigm";
-import S05_Concept from "./S05_Concept";
-import S06_SemanticPipeline from "./S06_SemanticPipeline";
-import S07_Compression from "./S07_Compression";
-import S08_KPI from "./S08_KPI";
-import S09_Avdiivka_Wave1 from "./S09_Avdiivka_Wave1";
-import S10_RU_vs_UA from "./S10_RU_vs_UA";
-import S11_Wave2_Decision from "./S11_Wave2_Decision";
-import S12_Comparison from "./S12_Comparison";
-import S13_Gaps from "./S13_Gaps";
-import S14_Closing from "./S14_Closing";
+import S02_Presenters from "./S02_Presenters";
+import S03_Question from "./S03_Question";
+import S04_Problem from "./S04_Problem";
+import S05_TacticalAI from "./S05_TacticalAI";
+import S06_Paradigm from "./S06_Paradigm";
+import S07_Concept from "./S07_Concept";
+import S08_DemoConditions from "./S08_DemoConditions";
+import S09_DemoScenario from "./S09_DemoScenario";
+import S10_SemanticPipeline from "./S10_SemanticPipeline";
+import S11_Compression from "./S11_Compression";
+import S12_KPI from "./S12_KPI";
+import S13_Avdiivka from "./S13_Avdiivka";
+import S14_RU_vs_UA from "./S14_RU_vs_UA";
+import S15_Decision from "./S15_Decision";
+import S16_Comparison from "./S16_Comparison";
+import S17_NextStep from "./S17_NextStep";
+import S18_Closing from "./S18_Closing";
+import SA1_Appendix_Bandwidth from "./SA1_Appendix_Bandwidth";
 
 // 슬라이드 인덱스 (0-based) 와 일치하는 컴포넌트 배열
 export const SLIDES: ComponentType<SlideProps>[] = [
   S01_Title,
-  S02_Problem,
-  S03_Bandwidth,
-  S04_Paradigm,
-  S05_Concept,
-  S06_SemanticPipeline,
-  S07_Compression,
-  S08_KPI,
-  S09_Avdiivka_Wave1,
-  S10_RU_vs_UA,
-  S11_Wave2_Decision,
-  S12_Comparison,
-  S13_Gaps,
-  S14_Closing,
+  S02_Presenters,
+  S03_Question,
+  S04_Problem,
+  S05_TacticalAI,
+  S06_Paradigm,
+  S07_Concept,
+  S08_DemoConditions,
+  S09_DemoScenario,
+  S10_SemanticPipeline,
+  S11_Compression,
+  S12_KPI,
+  S13_Avdiivka,
+  S14_RU_vs_UA,
+  S15_Decision,
+  S16_Comparison,
+  S17_NextStep,
+  S18_Closing,
+  SA1_Appendix_Bandwidth,
 ];

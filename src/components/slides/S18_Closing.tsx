@@ -39,9 +39,9 @@ export default function S14_Closing({ meta, active }: SlideProps) {
           animate={active ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          고용량 정보를 전술통신망에서 운용하도록,
+          영상을 보내는 시대에서 의미를 보내는 시대로.
           <br />
-          <span className="text-accent">AI - 시맨틱 전송체계로 혁신합니다.</span>
+          <span className="text-accent">S-DOT는 그 전환의 시작입니다.</span>
         </motion.h2>
 
         {/* 구분선 + S-DOT 서브타이틀 */}

@@ -73,7 +73,7 @@ export default function S01_Title({ meta, active }: SlideProps) {
           >
             <p className="text-[20px] text-fg-muted leading-[1.7]">
               Edge AI 기반 초경량 시맨틱 전송 체계 —
-              99% 데이터 감축, 9.6 Kbps 환경에서도 끊기지 않는 킬체인.
+              99% 데이터 감축, 전술통신망의 극히 제한된 대역폭에서도 끊기지 않는 킬체인.
             </p>
           </motion.div>
         </div>

@@ -39,7 +39,7 @@ export default function SlideFrame({
           </div>
           <div className="mx-8 h-[1px] flex-1 bg-border" />
           <span className="text-[15px] tracking-label text-fg-dim">
-            {String(meta.number).padStart(2, "0")} / 14
+            {String(meta.number).padStart(2, "0")} / 18
           </span>
         </header>
       )}
