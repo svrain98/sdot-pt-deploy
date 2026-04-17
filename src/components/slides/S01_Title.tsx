@@ -29,7 +29,7 @@ export default function S01_Title({ meta, active }: SlideProps) {
           animate={active ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-[15px] font-semibold tracking-label text-accent">
+          <span className="text-[20px] font-semibold tracking-label text-accent">
             제5회 육군 인공지능 아이디어 공모전 · 본선
           </span>
         </motion.div>
@@ -84,7 +84,7 @@ export default function S01_Title({ meta, active }: SlideProps) {
           animate={active ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 1.8 }}
         >
-          <p className="text-[15px] font-medium uppercase tracking-label text-fg-dim">
+          <p className="text-[20px] font-medium uppercase tracking-label text-fg-dim">
             Edge AI · Semantic Communication · Tactical Network
           </p>
         </motion.div>

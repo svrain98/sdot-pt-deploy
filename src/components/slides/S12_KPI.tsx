@@ -14,7 +14,7 @@ export default function S08_KPI({ meta, active, step }: SlideProps) {
         {/* 헤더 */}
         <div className="flex items-end justify-between">
           <div>
-            <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[15px] font-medium uppercase tracking-label text-accent">
+            <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent">
               Key Performance Indicators · 9 Formats Benchmarked
             </div>
             <h2 className="mt-4 text-[64px] font-black tracking-heading leading-[1.05] text-fg">
@@ -63,7 +63,7 @@ export default function S08_KPI({ meta, active, step }: SlideProps) {
           animate={active && step >= 1 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="mb-6 text-[15px] font-medium uppercase tracking-label text-fg-dim">
+          <div className="mb-6 text-[20px] font-medium uppercase tracking-label text-fg-dim">
             Format Size Comparison
           </div>
           <BarChart

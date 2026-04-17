@@ -24,7 +24,7 @@ export default function S14_Closing({ meta, active }: SlideProps) {
       <div className="relative flex h-full w-full flex-col items-center justify-center px-[140px]">
         {/* 태그 */}
         <motion.div
-          className="mb-8 inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[15px] font-medium uppercase tracking-label text-accent"
+          className="mb-8 inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent"
           initial={{ opacity: 0 }}
           animate={active ? { opacity: 1 } : {}}
           transition={{ duration: 0.8 }}

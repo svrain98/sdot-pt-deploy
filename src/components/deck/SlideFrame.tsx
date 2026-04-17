@@ -30,16 +30,18 @@ export default function SlideFrame({
       {showChrome && (
         <header className="absolute left-[140px] right-[140px] top-[80px] z-10 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="text-[18px] font-bold tracking-label text-accent">
+            <span className="text-[20px] font-bold tracking-label text-accent">
               S-DOT
             </span>
-            <span className="text-[15px] tracking-label text-fg-dim">
+            <span className="text-[20px] tracking-label text-fg-dim">
               Semantic Data On Tactical-network
             </span>
           </div>
           <div className="mx-8 h-[1px] flex-1 bg-border" />
-          <span className="text-[15px] tracking-label text-fg-dim">
-            {String(meta.number).padStart(2, "0")} / 18
+          <span className="text-[20px] tracking-label text-fg-dim">
+            {meta.number <= 18
+              ? `${String(meta.number).padStart(2, "0")} / 18`
+              : "Reference"}
           </span>
         </header>
       )}

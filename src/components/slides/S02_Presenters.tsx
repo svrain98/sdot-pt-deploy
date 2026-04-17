@@ -19,7 +19,7 @@ export default function S02_Presenters({ meta, active, step }: SlideProps) {
       <div className="flex h-full w-full flex-col px-[140px] pt-[140px] pb-[120px]">
         {/* 헤더 */}
         <div>
-          <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[15px] font-medium uppercase tracking-label text-accent">
+          <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent">
             TEAM · 발표 팀 소개
           </div>
           <h2 className="mt-4 text-[64px] font-black tracking-heading text-fg leading-[1.1]">
@@ -50,7 +50,7 @@ export default function S02_Presenters({ meta, active, step }: SlideProps) {
               {/* 이름 */}
               <p className="mt-4 text-[20px] font-bold text-fg">{p.name}</p>
               {/* 역할 */}
-              <p className="mt-1 text-[16px] text-fg-muted">{p.role}</p>
+              <p className="mt-1 text-[20px] text-fg-muted">{p.role}</p>
             </motion.div>
           ))}
         </div>

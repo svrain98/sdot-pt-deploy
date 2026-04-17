@@ -12,7 +12,7 @@ export default function S03_Bandwidth({ meta, active, step }: SlideProps) {
     <SlideFrame meta={meta}>
       <div className="flex h-full w-full flex-col px-[140px] pt-[140px] pb-[120px]">
         <div>
-          <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[15px] font-medium uppercase tracking-label text-accent">
+          <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent">
             Context · Army TIGER 4.0
           </div>
           <h2 className="mt-4 text-[56px] font-black tracking-heading text-fg leading-[1.4]">
@@ -44,7 +44,7 @@ export default function S03_Bandwidth({ meta, active, step }: SlideProps) {
             >
               <HlsVideo src={VIDEO.S03_GLITCH} />
             </div>
-            <p className="mt-3 text-[18px] text-fg-muted">
+            <p className="mt-3 text-[20px] text-fg-muted">
               P-999K 데이터 모드 · 헤더 오버헤드 · 전자전 취약
             </p>
           </motion.div>
@@ -71,7 +71,7 @@ export default function S03_Bandwidth({ meta, active, step }: SlideProps) {
             <div className="relative aspect-video w-full overflow-hidden rounded border border-border">
               <HlsVideo src={VIDEO.MAIN} />
             </div>
-            <p className="mt-3 text-[18px] text-fg-muted">
+            <p className="mt-3 text-[20px] text-fg-muted">
               4K EO/IR · 드론 무인차량 실시간 스트림 · 광대역 필수
             </p>
           </motion.div>

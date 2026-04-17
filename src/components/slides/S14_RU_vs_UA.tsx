@@ -15,7 +15,7 @@ export default function S10_RU_vs_UA({ meta, active, step }: SlideProps) {
       <div className="flex h-full w-full flex-col px-[140px] pt-[140px] pb-[120px]">
         {/* 헤더 */}
         <div>
-          <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[15px] font-medium uppercase tracking-label text-accent">
+          <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent">
             Day 1 → Day 2 · Why Wave 2 Repeated
           </div>
           <h2 className="mt-4 text-[64px] font-black tracking-heading leading-[1.05] text-fg">
@@ -38,7 +38,7 @@ export default function S10_RU_vs_UA({ meta, active, step }: SlideProps) {
                   startSeconds={30}
                 />
                 <div className="absolute bottom-6 left-6 right-6 rounded-card border border-border bg-black/80 p-4">
-                  <div className="mb-2 text-[16px] font-medium uppercase tracking-label text-fg-muted">
+                  <div className="mb-2 text-[20px] font-medium uppercase tracking-label text-fg-muted">
                     지휘통제 한계
                   </div>
                   <ul className="space-y-1 text-[20px] text-fg-muted">
@@ -61,7 +61,7 @@ export default function S10_RU_vs_UA({ meta, active, step }: SlideProps) {
                   transition={{ duration: 0.8, delay: 0.3 }}
                   className="absolute bottom-6 left-6 right-6 rounded-card border border-accent bg-black/85 p-4"
                 >
-                  <div className="mb-2 text-[16px] font-medium uppercase tracking-label text-accent">
+                  <div className="mb-2 text-[20px] font-medium uppercase tracking-label text-accent">
                     S-DOT Enabled C2
                   </div>
                   <ul className="space-y-1 text-[20px] text-fg">

@@ -19,7 +19,7 @@ export default function S06_SemanticPipeline({
       <div className="flex h-full w-full flex-col px-[140px] pt-[140px] pb-[120px]">
         <div className="flex items-end justify-between">
           <div>
-            <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[15px] font-medium uppercase tracking-label text-accent">
+            <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent">
               Live Demo · Semantic Conversion
             </div>
             <h2 className="mt-3 text-[52px] font-black tracking-heading text-fg leading-[1.1]">
@@ -27,7 +27,7 @@ export default function S06_SemanticPipeline({
               <span className="text-accent">RDF Triple</span>
             </h2>
           </div>
-          <div className="text-[18px] font-medium uppercase tracking-label text-fg-dim">
+          <div className="text-[20px] font-medium uppercase tracking-label text-fg-dim">
             Jetson Orin Nano · VLM 추론 · 28 FPS
           </div>
         </div>
@@ -36,10 +36,10 @@ export default function S06_SemanticPipeline({
           {/* 좌측: 원본 드론 영상 */}
           <div className="flex flex-col">
             <div className="mb-3 flex items-center justify-between">
-              <span className="text-[16px] font-medium uppercase tracking-label text-fg-muted">
+              <span className="text-[20px] font-medium uppercase tracking-label text-fg-muted">
                 ● INPUT · EO/IR Frame
               </span>
-              <span className="text-[16px] text-fg-muted">
+              <span className="text-[20px] text-fg-muted">
                 ~835 KB / frame
               </span>
             </div>
@@ -52,7 +52,7 @@ export default function S06_SemanticPipeline({
                 transition={{ duration: 0.4, delay: 0.8 }}
                 className="pointer-events-none absolute left-[34%] top-[38%] h-[30%] w-[38%] border-2 border-accent"
               >
-                <div className="absolute -top-6 left-0 bg-accent px-2 py-0.5 text-[14px] font-medium text-black">
+                <div className="absolute -top-6 left-0 bg-accent px-2 py-0.5 text-[20px] font-medium text-black">
                   2S19 Msta · 0.94
                 </div>
               </motion.div>
@@ -65,10 +65,10 @@ export default function S06_SemanticPipeline({
           {/* 우측: RDF Triple 타이핑 */}
           <div className="flex flex-col">
             <div className="mb-3 flex items-center justify-between">
-              <span className="text-[16px] font-medium uppercase tracking-label text-accent">
+              <span className="text-[20px] font-medium uppercase tracking-label text-accent">
                 ● OUTPUT · RDF Triple (JSON-LD)
               </span>
-              <span className="text-[16px] text-fg-muted">
+              <span className="text-[20px] text-fg-muted">
                 ≈ 48 B / frame
               </span>
             </div>

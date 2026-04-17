@@ -12,7 +12,7 @@ export default function S04_Paradigm({ meta, active, step }: SlideProps) {
       <div className="relative flex h-full w-full flex-col items-center justify-center px-[140px]">
         {/* 태그 */}
         <motion.div
-          className="mb-10 inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[15px] font-medium uppercase tracking-label text-accent"
+          className="mb-10 inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent"
           initial={{ opacity: 0, y: -20 }}
           animate={active ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -27,7 +27,7 @@ export default function S04_Paradigm({ meta, active, step }: SlideProps) {
             animate={active ? { opacity: 0.5 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <div className="mb-2 text-[16px] font-medium uppercase tracking-label text-fg-dim">
+            <div className="mb-2 text-[20px] font-medium uppercase tracking-label text-fg-dim">
               Before
             </div>
             <div className="text-[48px] font-black leading-none text-fg-dim line-through decoration-fg-dim/60 decoration-[3px]">
@@ -39,7 +39,7 @@ export default function S04_Paradigm({ meta, active, step }: SlideProps) {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={active ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex h-12 w-12 items-center justify-center rounded-full border border-accent/60 text-[16px] font-black text-accent"
+            className="flex h-12 w-12 items-center justify-center rounded-full border border-accent/60 text-[20px] font-black text-accent"
           >
             →
           </motion.div>

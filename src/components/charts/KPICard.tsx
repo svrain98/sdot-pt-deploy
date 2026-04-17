@@ -33,7 +33,7 @@ export default function KPICard({
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       {/* 라벨 */}
-      <div className="mb-4 text-[16px] uppercase tracking-label text-fg-dim">
+      <div className="mb-4 text-[20px] uppercase tracking-label text-fg-dim">
         {label}
       </div>
 
@@ -47,7 +47,7 @@ export default function KPICard({
             format={format ?? ((v) => Math.round(v).toLocaleString("ko-KR"))}
           />
         </span>
-        <span className="text-[18px] text-fg-muted">{unit}</span>
+        <span className="text-[20px] text-fg-muted">{unit}</span>
       </div>
     </motion.div>
   );

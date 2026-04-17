@@ -43,7 +43,7 @@ export default function S04_Problem({ meta, active, step }: SlideProps) {
                 &ldquo;전술 제대의 대역폭은 최신 AI 플랫폼 요구량(3.6Tbps)에 턱없이 부족하다.
                 해법 중 하나는 로컬에서 압축·정제 후 핵심만 전달하는 것이다.&rdquo;
               </p>
-              <p className="mt-2 text-[16px] font-medium uppercase tracking-label text-fg-dim">
+              <p className="mt-2 text-[20px] font-medium uppercase tracking-label text-fg-dim">
                 — Adler, Military Review (2025)
               </p>
             </div>
@@ -58,7 +58,7 @@ export default function S04_Problem({ meta, active, step }: SlideProps) {
               key={p.title}
               initial={{ opacity: 0, y: 40 }}
               animate={
-                active && step >= i
+                active && step >= i + 1
                   ? { opacity: 1, y: 0 }
                   : { opacity: 0, y: 40 }
               }
@@ -88,7 +88,7 @@ export default function S04_Problem({ meta, active, step }: SlideProps) {
 function Header() {
   return (
     <div>
-      <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[15px] font-medium uppercase tracking-label text-accent">
+      <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent">
         CHALLENGE · 전장 네트워크의 구조적 한계
       </div>
       <h2 className="mt-4 text-[64px] font-black tracking-heading text-fg leading-[1.1]">

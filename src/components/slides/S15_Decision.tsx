@@ -38,7 +38,7 @@ export default function S11_Wave2_Decision({
             animate={active ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[15px] font-medium uppercase tracking-label text-accent">
+            <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent">
               Day 2 · Wave 2 · DP-2 Decision Point
             </div>
             <h2 className="mt-4 text-[64px] font-black tracking-heading leading-[1.3] text-fg">
@@ -89,15 +89,15 @@ export default function S11_Wave2_Decision({
                     AI
                   </span>
                   <div>
-                    <div className="text-[15px] font-medium uppercase tracking-label text-accent">
+                    <div className="text-[20px] font-medium uppercase tracking-label text-accent">
                       AI Recommendation · DP-2
                     </div>
-                    <div className="text-[15px] font-bold text-fg">
+                    <div className="text-[20px] font-bold text-fg">
                       FPV Drone 즉각 출격
                     </div>
                   </div>
                 </div>
-                <div className="rounded-card border border-accent/40 bg-accent/10 px-2 py-0.5 text-[14px] font-black uppercase tracking-label text-accent">
+                <div className="rounded-card border border-accent/40 bg-accent/10 px-2 py-0.5 text-[20px] font-black uppercase tracking-label text-accent">
                   High · 0.94
                 </div>
               </div>
@@ -112,7 +112,7 @@ export default function S11_Wave2_Decision({
               />
               <Row label="Effect" value="축선 차단 · 예상 파괴율 78%" />
               <Row label="Risk" value="FPV 손실 5~8기 · 허용 범위 내" />
-              <div className="border-t border-border pt-3 text-[18px] text-fg-muted">
+              <div className="border-t border-border pt-3 text-[20px] text-fg-muted">
                 Based on Day 1 Wave 1 BDA · Ontology hit: 12 matching precedents
               </div>
             </div>
@@ -140,24 +140,24 @@ export default function S11_Wave2_Decision({
                 }}
                 className="flex flex-col items-center border-r border-border py-5"
               >
-                <div className="text-[16px] font-medium uppercase tracking-label text-accent">
+                <div className="text-[20px] font-medium uppercase tracking-label text-accent">
                   Approve · F7
                 </div>
                 <div className="mt-1 text-[28px] font-black text-accent">
                   YES
                 </div>
-                <div className="text-[16px] text-fg-muted">
+                <div className="text-[20px] text-fg-muted">
                   ↓ Fire Mission 자동 생성
                 </div>
               </motion.button>
               <button className="flex flex-col items-center py-5 opacity-40 bg-bg-panel">
-                <div className="text-[16px] font-medium uppercase tracking-label text-fg-dim">
+                <div className="text-[20px] font-medium uppercase tracking-label text-fg-dim">
                   Reject · F8
                 </div>
                 <div className="mt-1 text-[28px] font-black text-fg-dim">
                   NO
                 </div>
-                <div className="text-[16px] text-fg-muted">
+                <div className="text-[20px] text-fg-muted">
                   대안 추천 재요청
                 </div>
               </button>
@@ -181,7 +181,7 @@ function Chip({ children }: { children: React.ReactNode }) {
 function Row({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex items-baseline justify-between gap-4">
-      <span className="text-[15px] font-medium uppercase tracking-label text-fg-dim">
+      <span className="text-[20px] font-medium uppercase tracking-label text-fg-dim">
         {label}
       </span>
       <span className="text-right text-fg">{value}</span>

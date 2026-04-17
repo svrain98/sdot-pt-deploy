@@ -11,7 +11,7 @@ export default function S12_Comparison({ meta, active }: SlideProps) {
       <div className="flex h-full w-full flex-col px-[140px] pt-[140px] pb-[120px]">
         {/* 헤더 */}
         <div>
-          <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[15px] font-medium uppercase tracking-label text-accent">
+          <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent">
             Differentiation · 기존 체계와의 차별성
           </div>
           <h2 className="mt-4 text-[64px] font-black tracking-heading leading-[1.05] text-fg">

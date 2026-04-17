@@ -46,7 +46,7 @@ export default function S05_Concept({ meta, active, step }: SlideProps) {
     <SlideFrame meta={meta}>
       <div className="flex h-full w-full flex-col px-[140px] pt-[140px] pb-[120px]">
         <div>
-          <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[15px] font-medium uppercase tracking-label text-accent">
+          <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent">
             System Concept · 3-Layer Architecture
           </div>
           <h2 className="mt-4 text-[56px] font-black tracking-heading text-fg leading-[1.1]">
@@ -88,7 +88,7 @@ export default function S05_Concept({ meta, active, step }: SlideProps) {
                   ))}
                 </ul>
 
-                <div className="mt-auto border-t border-border pt-4 text-[16px] font-medium uppercase tracking-label text-fg-dim">
+                <div className="mt-auto border-t border-border pt-4 text-[20px] font-medium uppercase tracking-label text-fg-dim">
                   {l.tech}
                 </div>
               </div>

@@ -49,18 +49,18 @@ export default function BarChart({ items, active, unit, className }: Props) {
           >
             {/* 라벨 행 */}
             <div className="mb-[6px] flex items-baseline justify-between">
-              <span className="text-[16px] tracking-label text-fg-muted uppercase">
+              <span className="text-[20px] tracking-label text-fg-muted uppercase">
                 {item.label}
               </span>
               <span
                 className={clsx(
-                  "text-[16px] font-semibold",
+                  "text-[20px] font-semibold",
                   TONE_VALUE[tone]
                 )}
               >
                 {item.value.toLocaleString("ko-KR")}
                 {unit && (
-                  <span className="ml-1 text-[15px] text-fg-dim">{unit}</span>
+                  <span className="ml-1 text-[20px] text-fg-dim">{unit}</span>
                 )}
               </span>
             </div>

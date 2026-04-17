@@ -55,7 +55,7 @@ export default function S09_Avdiivka_Wave1({
             animate={active ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[15px] font-medium uppercase tracking-label text-accent">
+            <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent">
               Day 1 · Wave 1 · 2023-10-10
             </div>
             <h2 className="mt-4 text-[64px] font-black tracking-heading leading-[1.2] text-fg">
@@ -92,7 +92,7 @@ export default function S09_Avdiivka_Wave1({
                 <div className="mt-0.5 text-[20px] font-bold text-fg">
                   {t.text}
                 </div>
-                <div className="text-[18px] text-fg-muted">{t.subtext}</div>
+                <div className="text-[20px] text-fg-muted">{t.subtext}</div>
               </motion.div>
             ))}
           </div>
@@ -123,7 +123,7 @@ export default function S09_Avdiivka_Wave1({
    "p": "activity:phase",
    "o": "prep-fire" }]`}
             </pre>
-            <div className="mt-3 flex items-center justify-between border-t border-border pt-2 text-[16px] font-medium uppercase tracking-label">
+            <div className="mt-3 flex items-center justify-between border-t border-border pt-2 text-[20px] font-medium uppercase tracking-label">
               <span className="text-fg-muted">원본 815.7 KB</span>
               <span className="text-accent font-black">17,401:1</span>
               <span className="text-accent-light">S-DOT 48 B</span>

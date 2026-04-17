@@ -30,11 +30,11 @@ export default function ComparisonTable({
     <div className={clsx("w-full", className)}>
       {/* 헤더 행 */}
       <div className="mb-3 grid grid-cols-[1fr_1fr_1fr] gap-4 pb-2 border-b border-border">
-        <span className="text-[14px] uppercase tracking-label text-fg-dim" />
-        <span className="text-[14px] uppercase tracking-label text-fg-dim">
+        <span className="text-[20px] uppercase tracking-label text-fg-dim" />
+        <span className="text-[20px] uppercase tracking-label text-fg-dim">
           {beforeLabel}
         </span>
-        <span className="text-[14px] uppercase tracking-label text-fg-dim">
+        <span className="text-[20px] uppercase tracking-label text-fg-dim">
           {afterLabel}
         </span>
       </div>
@@ -53,17 +53,17 @@ export default function ComparisonTable({
           }}
         >
           {/* 축 레이블 */}
-          <span className="text-[16px] uppercase tracking-label text-fg-dim self-center">
+          <span className="text-[22px] uppercase tracking-label text-fg-dim self-center">
             {row.axis}
           </span>
 
           {/* before — 취소선 */}
-          <span className="text-[16px] text-fg-dim line-through self-center">
+          <span className="text-[22px] text-fg-dim line-through self-center">
             {row.before}
           </span>
 
           {/* after — 올리브 강조 */}
-          <span className="text-[16px] font-semibold text-accent self-center">
+          <span className="text-[22px] font-semibold text-accent self-center">
             {row.after}
           </span>
         </motion.div>

@@ -13,7 +13,7 @@ export default function S07_Compression({ meta, active, step }: SlideProps) {
       <div className="flex h-full w-full flex-col px-[140px] pt-[140px] pb-[120px]">
         <div className="flex items-end justify-between">
           <div>
-            <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[15px] font-medium uppercase tracking-label text-accent">
+            <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent">
               Device Test · Jetson Orin Nano
             </div>
             <h2 className="mt-3 text-[56px] font-black tracking-heading text-fg leading-[1.1]">

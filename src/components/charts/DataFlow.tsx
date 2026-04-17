@@ -114,11 +114,11 @@ export default function DataFlow({ nodes, active, className }: Props) {
               className="flex h-full flex-col items-center justify-center rounded-lg border border-accent bg-bg-panel px-3"
               style={{ width: NODE_W, height: NODE_H }}
             >
-              <span className="text-[16px] font-semibold text-fg text-center leading-tight">
+              <span className="text-[20px] font-semibold text-fg text-center leading-tight">
                 {node.label}
               </span>
               {node.sublabel && (
-                <span className="mt-1 text-[15px] text-fg-dim text-center leading-tight">
+                <span className="mt-1 text-[20px] text-fg-dim text-center leading-tight">
                   {node.sublabel}
                 </span>
               )}

@@ -5,7 +5,7 @@ export const SLIDE_META: SlideMeta[] = [
   { id: "S01", number: 1, title: "S-DOT", subtitle: "시맨틱 데이터 전송 기술", presenter: "instructor", duration: "25s", steps: 1, notes: "타이틀. 메인 영상 배경." },
   { id: "S02", number: 2, title: "발표자 소개", subtitle: "팀 소개", presenter: "instructor", duration: "15s", steps: 1, notes: "4명 사진+소개." },
   { id: "S03", number: 3, title: "질문", subtitle: "", presenter: "instructor", duration: "10s", steps: 1, notes: "순수 블랙 + 질문. 3~4초 침묵 유도." },
-  { id: "S04", number: 4, title: "전장 네트워크의 구조적 한계", subtitle: "SAMS 인용 + 3가지 문제", presenter: "instructor", duration: "1'30\"", steps: 3, notes: "SAMS 인용바 + 3카드." },
+  { id: "S04", number: 4, title: "전장 네트워크의 구조적 한계", subtitle: "SAMS 인용 + 3가지 문제", presenter: "instructor", duration: "1'30\"", steps: 4, notes: "SAMS 인용바 + 3카드." },
   { id: "S05", number: 5, title: "전술 AI가 나아가는 방향", subtitle: "Parameters + IEEE MILCOM", presenter: "instructor", duration: "55s", steps: 2, notes: "2열 논문 인용 카드." },
   { id: "S06", number: 6, title: "영상이 아닌 '의미'를 전송한다", subtitle: "패러다임 전환", presenter: "instructor", duration: "1'00\"", steps: 2, notes: "Before→After 타이포." },
   { id: "S07", number: 7, title: "S-DOT 시스템 개념도", subtitle: "Edge · Network · C2", presenter: "instructor", duration: "1'00\"", steps: 3, notes: "3레이어 카드." },

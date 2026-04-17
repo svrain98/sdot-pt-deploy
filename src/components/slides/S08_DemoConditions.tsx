@@ -15,7 +15,7 @@ export default function S08_DemoConditions({ meta, active }: SlideProps) {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[15px] font-medium uppercase tracking-label text-accent mb-6">
+          <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent mb-6">
             Demo Conditions · 구현 범위
           </div>
           <h2 className="text-[64px] font-black tracking-heading text-fg leading-[1.1]">
