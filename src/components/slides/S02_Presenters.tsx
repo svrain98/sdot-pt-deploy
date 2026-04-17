@@ -7,10 +7,10 @@ import type { SlideProps } from "@/types/slide";
 
 // 02 — 발표자 소개: 4인 카드 그리드
 const PRESENTERS = [
-  { slot: "S02_presenter_1", name: "이선경", org: "육군정보통신학교 교관", role: "아이디어 제안", photo: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/640e0d68-666d-4e54-17c7-89b9ca046100/public" },
-  { slot: "S02_presenter_2", name: "박민규", org: "모프시스템즈 CEO", role: "프로젝트 리드", photo: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/64f3400d-e667-4038-e280-33f29af25100/public" },
-  { slot: "S02_presenter_3", name: "박윤서", org: "모프시스템즈 엔지니어", role: "시스템 개발", photo: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/419e734c-8ab3-49ab-df0e-361463b07100/public" },
-  { slot: "S02_presenter_4", name: "최강근", org: "익시드테크 CEO", role: "전술 지원 및 개발", photo: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/2f33dad1-43fe-4154-8591-8e0184983600/public" },
+  { slot: "S02_presenter_1", name: "이선경", org: "육군정보통신학교 교관", role: "아이디어 제안", photo: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/4f15ed96-eca9-4f23-aeae-44118c53cb00/public" },
+  { slot: "S02_presenter_2", name: "박민규", org: "모프시스템즈 CEO", role: "프로젝트 리드", photo: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/1c31db4c-f986-47a6-b42d-d3a2e536ad00/public" },
+  { slot: "S02_presenter_3", name: "박윤서", org: "모프시스템즈 엔지니어", role: "시스템 개발", photo: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/51ff16c7-6213-42a3-0ec3-b1c018f1a000/public" },
+  { slot: "S02_presenter_4", name: "최강근", org: "익시드테크 CEO", role: "전술 지원 및 개발", photo: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/9646b1c2-e984-4e6c-6a1c-bbc9afa41e00/public" },
 ];
 
 export default function S02_Presenters({ meta, active, step }: SlideProps) {
