@@ -12,6 +12,10 @@ export const VIDEO = {
   S06_DRONE_FEED: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/8f3231dd7c8e0a3220a3126fbd50868f/manifest/video.m3u8",
   S09_NIGHT_SURVEILLANCE: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/69599729a7f2381f11ed5af551932aea/manifest/video.m3u8",
   S10_UA_DASHBOARD: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/ff2f60d4a7b88dbe5d15c2f1e4faac40/manifest/video.m3u8",
+  // 후반부 시연 영상 (개발자 수정본)
+  DRONE_SEMANTIC: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/37c43783acfd1354e6fec30d55eef5a7/manifest/video.m3u8",
+  SCENARIO_PART1: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/141e77208bedbfa367973df109c3a87a/manifest/video.m3u8",
+  SCENARIO_PART2: "https://customer-8tsjql0rhg5ugd98.cloudflarestream.com/569079d8f7b4aabbe764b6758d6e30a7/manifest/video.m3u8",
 } as const;
 
 export const IMAGE = {
@@ -33,6 +37,11 @@ export const IMAGE = {
   DECISION_CARD_UI: "/images/decision_card_ui.png",
   RU_C2_STILL: "/images/ru_c2_still.png",
   UA_SDOT_DASHBOARD: "/images/ua_sdot_dashboard.png",
+  // 파이프라인 줌 연출 (Cloudflare Images)
+  PIPELINE_OVERVIEW: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/f9910831-a9ce-4cd1-d966-e7279acdd900/public",
+  PIPELINE_EDGE: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/6d3b44c8-c3ab-4769-cbd0-dbba52a6e000/public",
+  PIPELINE_FOUNDRY: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/0c6778f1-e5e9-4ccc-d274-86481d8fe600/public",
+  PIPELINE_AIP: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/ed475b81-30bd-48cf-5a9c-1f1fddb18900/public",
 } as const;
 
 export const DATA = {

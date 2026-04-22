@@ -42,7 +42,7 @@ export default function S01_Title({ meta, active }: SlideProps) {
             animate={active ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            현대전장의 전술통신망 한계를 극복하는
+            현대 전장의 전술통신망 한계를 극복하는
             <br />
             <span className="text-accent">시맨틱 데이터 전송 기술 S-DOT</span>
           </motion.h1>
@@ -71,9 +71,9 @@ export default function S01_Title({ meta, active }: SlideProps) {
             animate={active ? { opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 1.4 }}
           >
-            <p className="text-[20px] text-fg-muted leading-[1.7]">
+            <p className="text-[24px] text-fg-muted leading-[1.7]">
               Edge AI 기반 초경량 시맨틱 전송 체계 —
-              99% 데이터 감축, 전술통신망의 극히 제한된 대역폭에서도 끊기지 않는 킬체인.
+              99% 데이터 감축, 제한된 전장 네트워크에서도 전송 보장
             </p>
           </motion.div>
         </div>

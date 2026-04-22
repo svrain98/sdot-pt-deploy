@@ -19,6 +19,7 @@ type Props = {
   autoPlay?: boolean;
   className?: string;
   fit?: "cover" | "contain";
+  initialHoldMs?: number; // PipelineZoomStage 에서 전달 — 현재 미사용
 };
 
 export default function PlaceholderMedia({

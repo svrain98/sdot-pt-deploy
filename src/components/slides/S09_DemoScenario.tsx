@@ -4,25 +4,93 @@ import { motion } from "framer-motion";
 import SlideFrame from "@/components/deck/SlideFrame";
 import type { SlideProps } from "@/types/slide";
 
-// 09 — 데모 시나리오: 아우디우카 전투
-export default function S09_DemoScenario({ meta, active }: SlideProps) {
+// 09 - 데모 시나리오: 아우디우카 전투
+// 좌측: 타임라인 / 우측: 드론 탐지 스틸
+// step 1: 하단 핵심 질문 박스 등장
+const TIMELINE = [
+  { time: "04:00Z", event: "러시아 포병 준비사격 개시", sub: "전차(T-80BVM) 6대 · 장갑차(BMP-2) 8대", warning: false },
+  { time: "05:00Z", event: "러시아 1제대 북측 축선 진입", sub: "", warning: false },
+  { time: "05:20Z", event: "1제대 격파 — 지뢰·대전차미사일로 통로 차단", sub: "", warning: false },
+  { time: "⚠️", event: "정보 단절", sub: "", warning: true },
+  { time: "06:30Z", event: "러시아 2제대 동일 축선 재진입", sub: "전차(T-72B3) 4대 · 장갑차(BMP-2) 6대", warning: false },
+  { time: "06:45Z", event: "2제대 동일 피해 반복", sub: "", warning: false },
+];
+
+export default function S09_DemoScenario({ meta, active, step }: SlideProps) {
   return (
     <SlideFrame meta={meta}>
-      <div className="flex h-full w-full flex-col items-center justify-center px-[140px]">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={active ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center"
-        >
-          <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent mb-6">
-            Demo Scenario · 아우디우카 전투
+      <div className="flex h-full w-full flex-col px-[140px] pt-[140px] pb-[120px]">
+
+        {/* 헤더 */}
+        <div>
+          <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent">
+            DAY 1 · 2023-10-10 · AVDIIVKA
           </div>
-          <h2 className="text-[64px] font-black tracking-heading text-fg leading-[1.1]">
+          <h2 className="mt-4 text-[56px] font-black tracking-heading text-fg leading-[1.1]">
             데모 시나리오: 아우디우카 전투
           </h2>
-          <p className="mt-6 text-[28px] text-fg-muted">같은 축선, 두 번의 실패</p>
+          <p className="mt-2 text-[26px] text-fg-muted">같은 축선, 두 번의 실패 — 왜 반복됐는가?</p>
+        </div>
+
+        {/* 좌우 분할 */}
+        <div className="mt-8 flex flex-1 gap-10">
+
+          {/* 좌측 — 타임라인 */}
+          <div className="flex w-[55%] flex-col justify-center gap-5">
+            {TIMELINE.map((t, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                animate={active ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                transition={{ duration: 0.4, delay: 0.15 + i * 0.12 }}
+                className="flex items-start gap-5"
+              >
+                <span className={`w-[110px] shrink-0 text-[22px] font-bold text-right pt-1 ${t.warning ? "text-yellow-400" : "text-accent"}`}>
+                  {t.time}
+                </span>
+                <span className={`mt-[10px] w-2.5 h-2.5 rounded-full shrink-0 ${t.warning ? "bg-yellow-400" : "bg-accent"}`} />
+                <div className="flex flex-col">
+                  <span className={`text-[24px] ${t.warning ? "font-bold text-yellow-400" : "text-fg-muted"}`}>
+                    {t.event}
+                  </span>
+                  {t.sub && (
+                    <span className="text-[20px] text-fg-dim mt-0.5">{t.sub}</span>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* 우측 — 드론 탐지 스틸 */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={active ? { opacity: 1 } : { opacity: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="flex-1 rounded-card overflow-hidden border border-border"
+          >
+            <img
+              src="/images/thumbnails/evt_001.jpg"
+              alt="드론 전차 탐지 장면"
+              className="h-full w-full object-cover"
+            />
+          </motion.div>
+        </div>
+
+        {/* 핵심 질문 — 처음엔 흐리게, step 1에 선명 */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={active ? { opacity: step >= 1 ? 1 : 0.2 } : { opacity: 0 }}
+          transition={{ duration: 0.6, delay: step >= 1 ? 0.2 : 0.8 }}
+          className="mt-6 bg-bg-panel rounded-card border border-accent/30 p-6"
+        >
+          <p className="text-[24px] text-fg-muted leading-[1.7]">
+            우크라이나군은 지뢰지대와 대전차 미사일로 1제대를 막았습니다. 그 정보가 2제대에 전달됐다면 어땠을까요?
+          </p>
+          <p className="mt-3 text-[34px] font-bold text-accent">
+            전장 정보를 실시간으로 전파할 수 있는 기술이 있었다면, 같은 실수는 반복되지 않았을 것입니다.
+          </p>
         </motion.div>
+
       </div>
     </SlideFrame>
   );

@@ -11,6 +11,7 @@ type Props = {
   showChrome?: boolean;
   background?: ReactNode;
   className?: string;
+  transparent?: boolean; // 배경 투명 모드 — PipelineZoomStage 오버레이용
 };
 
 export default function SlideFrame({
@@ -19,16 +20,25 @@ export default function SlideFrame({
   showChrome = true,
   background,
   className,
+  transparent = false,
 }: Props) {
   return (
-    <div className={clsx("slide-frame", className)}>
+    <div
+      className={clsx("slide-frame", className, transparent && "pointer-events-none")}
+      style={transparent ? { background: "transparent" } : undefined}
+    >
       {background && (
         <div className="absolute inset-0 z-0">{background}</div>
       )}
 
-      {/* 상단 바 — 미니멀 */}
+      {/* 상단 바 — 미니멀. transparent 모드여도 chrome 자체는 클릭/읽기 가능 */}
       {showChrome && (
-        <header className="absolute left-[140px] right-[140px] top-[80px] z-10 flex items-center justify-between">
+        <header
+          className={clsx(
+            "absolute left-[140px] right-[140px] top-[80px] z-10 flex items-center justify-between",
+            transparent && "pointer-events-auto"
+          )}
+        >
           <div className="flex items-center gap-3">
             <span className="text-[20px] font-bold tracking-label text-accent">
               S-DOT
@@ -39,15 +49,20 @@ export default function SlideFrame({
           </div>
           <div className="mx-8 h-[1px] flex-1 bg-border" />
           <span className="text-[20px] tracking-label text-fg-dim">
-            {meta.number <= 18
-              ? `${String(meta.number).padStart(2, "0")} / 18`
+            {meta.number <= 21
+              ? `${String(meta.number).padStart(2, "0")} / 21`
               : "Reference"}
           </span>
         </header>
       )}
 
       {/* 본문 */}
-      <main className="absolute inset-0 z-10 flex items-center justify-center">
+      <main
+        className={clsx(
+          "absolute inset-0 z-10 flex items-center justify-center",
+          transparent && "pointer-events-none"
+        )}
+      >
         {children}
       </main>
     </div>

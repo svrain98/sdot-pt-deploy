@@ -9,6 +9,7 @@ type DeckState = {
   presenterMode: boolean;
   jumpBarOpen: boolean;
   timerStartedAt: number | null; // 경과시간 타이머 시작 timestamp (ms)
+  bgVideoPaused: boolean; // V 키로 배경 영상 일시정지 토글
 
   setSlide: (index: number) => void;
   nextStep: (maxSteps: number) => void; // 스텝이 남으면 스텝++, 아니면 다음 슬라이드
@@ -17,6 +18,7 @@ type DeckState = {
   goPrev: () => void;
   togglePresenter: () => void;
   toggleJumpBar: () => void;
+  toggleBgVideo: () => void;
   startTimer: () => void;
   resetTimer: () => void;
   setTotalSlides: (n: number) => void;
@@ -29,6 +31,7 @@ export const useDeckStore = create<DeckState>((set, get) => ({
   presenterMode: false,
   jumpBarOpen: false,
   timerStartedAt: null,
+  bgVideoPaused: false,
 
   setSlide: (index) => {
     const total = get().totalSlides;
@@ -70,6 +73,7 @@ export const useDeckStore = create<DeckState>((set, get) => ({
 
   togglePresenter: () => set((s) => ({ presenterMode: !s.presenterMode })),
   toggleJumpBar: () => set((s) => ({ jumpBarOpen: !s.jumpBarOpen })),
+  toggleBgVideo: () => set((s) => ({ bgVideoPaused: !s.bgVideoPaused })),
 
   startTimer: () => {
     if (get().timerStartedAt === null) {

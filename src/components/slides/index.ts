@@ -10,15 +10,19 @@ import S06_Paradigm from "./S06_Paradigm";
 import S07_Concept from "./S07_Concept";
 import S08_DemoConditions from "./S08_DemoConditions";
 import S09_DemoScenario from "./S09_DemoScenario";
-import S10_SemanticPipeline from "./S10_SemanticPipeline";
-import S11_Compression from "./S11_Compression";
-import S12_KPI from "./S12_KPI";
-import S13_Avdiivka from "./S13_Avdiivka";
-import S14_RU_vs_UA from "./S14_RU_vs_UA";
-import S15_Decision from "./S15_Decision";
-import S16_Comparison from "./S16_Comparison";
-import S17_NextStep from "./S17_NextStep";
-import S18_Closing from "./S18_Closing";
+// 파이프라인 줌 시퀀스 (개발자 수정본)
+import S10_PipelineOverview from "./S10_PipelineOverview";
+import S11_EdgeZoom from "./S11_EdgeZoom";
+import S12_PipelineReturn1 from "./S12_PipelineReturn1";
+import S13_FoundryZoom from "./S13_FoundryZoom";
+import S14_PipelineReturn2 from "./S14_PipelineReturn2";
+import S15_AIPZoom from "./S15_AIPZoom";
+import S16_KPI from "./S16_KPI";
+import S17_Scenario1 from "./S17_Scenario1";
+import S18_InfoGap from "./S18_InfoGap";
+import S19_Scenario2 from "./S19_Scenario2";
+import S20_NextStep from "./S20_NextStep";
+import S21_Closing from "./S21_Closing";
 import SA1_Appendix_Bandwidth from "./SA1_Appendix_Bandwidth";
 
 // 슬라이드 인덱스 (0-based) 와 일치하는 컴포넌트 배열
@@ -32,14 +36,17 @@ export const SLIDES: ComponentType<SlideProps>[] = [
   S07_Concept,
   S08_DemoConditions,
   S09_DemoScenario,
-  S10_SemanticPipeline,
-  S11_Compression,
-  S12_KPI,
-  S13_Avdiivka,
-  S14_RU_vs_UA,
-  S15_Decision,
-  S16_Comparison,
-  S17_NextStep,
-  S18_Closing,
+  S10_PipelineOverview,
+  S11_EdgeZoom,
+  S12_PipelineReturn1,
+  S13_FoundryZoom,
+  S14_PipelineReturn2,
+  S15_AIPZoom,
+  S16_KPI,
+  S17_Scenario1,
+  S18_InfoGap,
+  S19_Scenario2,
+  S20_NextStep,
+  S21_Closing,
   SA1_Appendix_Bandwidth,
 ];

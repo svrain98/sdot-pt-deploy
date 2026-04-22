@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import SlideFrame from "@/components/deck/SlideFrame";
 import type { SlideProps } from "@/types/slide";
 
-// 04 — 패러다임 전환: 픽셀 → 의미
-// 교관님 핵심 메시지. 대형 타이포 강조. 배경: 팔란티어 대시보드 영상
-export default function S04_Paradigm({ meta, active, step }: SlideProps) {
+// 06 — 패러다임 전환: 픽셀 → 의미
+// 태그 → Before/After → 메인 카피 → 하단 설명 순차 자동 등장
+export default function S06_Paradigm({ meta, active, step }: SlideProps) {
   return (
     <SlideFrame meta={meta}>
       <div className="relative flex h-full w-full flex-col items-center justify-center px-[140px]">
@@ -15,17 +15,18 @@ export default function S04_Paradigm({ meta, active, step }: SlideProps) {
           className="mb-10 inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent"
           initial={{ opacity: 0, y: -20 }}
           animate={active ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
         >
           Paradigm Shift · 패러다임 전환
         </motion.div>
 
         {/* Before / After 비교 */}
         <div className="mb-12 flex items-baseline gap-10 text-center">
+          {/* Before */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={active ? { opacity: 0.5 } : {}}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
           >
             <div className="mb-2 text-[20px] font-medium uppercase tracking-label text-fg-dim">
               Before
@@ -35,19 +36,21 @@ export default function S04_Paradigm({ meta, active, step }: SlideProps) {
             </div>
           </motion.div>
 
+          {/* 화살표 */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={active ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
             className="flex h-12 w-12 items-center justify-center rounded-full border border-accent/60 text-[20px] font-black text-accent"
           >
             →
           </motion.div>
 
+          {/* After */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={active ? { opacity: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 1.0 }}
           >
             <div className="mb-2 text-[20px] font-medium uppercase tracking-label text-accent">
               After
@@ -58,12 +61,12 @@ export default function S04_Paradigm({ meta, active, step }: SlideProps) {
           </motion.div>
         </div>
 
-        {/* 메인 카피 */}
+        {/* 메인 카피 — After 등장 후 자동 등장 */}
         <motion.h2
           className="text-center text-[96px] font-black tracking-heading text-fg leading-[1.35]"
           initial={{ opacity: 0, y: 30 }}
           animate={active && step >= 1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 1, delay: 0.3 }}
+          transition={{ duration: 1, delay: 0.2 }}
         >
           영상이 아닌,
           <br />
@@ -72,17 +75,19 @@ export default function S04_Paradigm({ meta, active, step }: SlideProps) {
           </span>
         </motion.h2>
 
-        <motion.p
-          className="mt-12 max-w-[1000px] border-l-2 border-accent pl-6 text-[24px] text-fg-muted leading-[1.7]"
+        {/* 하단 설명 — step 1에 등장 */}
+        <motion.div
+          className="mt-12 max-w-[1200px] border-l-2 border-accent pl-6"
           initial={{ opacity: 0 }}
-          animate={active && step >= 1 ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8, delay: 1.0 }}
+          animate={active && step >= 1 ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
         >
-          고화질 영상 대신, 전장 판단에 필수적인 핵심 정보(객체·위치·행동)만 추출 후
-          전송하면 —<br />
-          전송량 99% 감축, 재밍 환경에서도 킬체인 생존. 6G 핵심 기술 &lsquo;시맨틱 통신&rsquo;의
-          국방 선제 적용.
-        </motion.p>
+          <p className="text-[28px] text-fg-muted leading-[1.9]">
+            전장에서 필요한 핵심 정보만 <span className="text-accent">→</span> 전송량 99% 감축<br />
+            불안정한 전장 환경에서도 <span className="text-accent">→</span> 전송 보장<br />
+            기계가 읽는 구조화된 언어 <span className="text-accent">→</span> <span className="text-accent font-bold">AI 즉시 이해</span>
+          </p>
+        </motion.div>
       </div>
     </SlideFrame>
   );
