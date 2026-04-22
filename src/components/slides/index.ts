@@ -23,9 +23,11 @@ import S18_InfoGap from "./S18_InfoGap";
 import S19_Scenario2 from "./S19_Scenario2";
 import S20_NextStep from "./S20_NextStep";
 import S21_Closing from "./S21_Closing";
+// SA1_Appendix_Bandwidth — 코드 유지, 현재 미배포
 import SA1_Appendix_Bandwidth from "./SA1_Appendix_Bandwidth";
 
 // 슬라이드 인덱스 (0-based) 와 일치하는 컴포넌트 배열
+// 부록(SA1)은 현재 배포 제외 — 필요 시 끝에 추가
 export const SLIDES: ComponentType<SlideProps>[] = [
   S01_Title,
   S02_Presenters,
@@ -48,5 +50,7 @@ export const SLIDES: ComponentType<SlideProps>[] = [
   S19_Scenario2,
   S20_NextStep,
   S21_Closing,
-  SA1_Appendix_Bandwidth,
 ];
+
+// 사용하지 않는 import에 대한 lint 경고 회피
+void SA1_Appendix_Bandwidth;

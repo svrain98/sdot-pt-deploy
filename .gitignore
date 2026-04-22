@@ -35,7 +35,7 @@ public/videos/*.mov
 public/videos/*.webm
 public/images/figures/*.png
 public/images/figures/*.svg
-public/images/thumbnails/*.jpg
+# public/images/thumbnails/*.jpg — S09 데모 시나리오 썸네일은 배포에 포함
 public/images/palantir_objects.png
 public/images/decision_card_ui.png
 public/data/compression_stats.json

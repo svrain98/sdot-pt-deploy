@@ -79,7 +79,7 @@ export default function S05_TacticalAI({ meta, active, step }: SlideProps) {
           </motion.div>
         </div>
 
-        {/* 하단 결론 — 처음엔 흐리게, step 2에 선명 */}
+        {/* 하단 결론 — 처음엔 흐리게, 마지막 step에 선명 */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={active ? {

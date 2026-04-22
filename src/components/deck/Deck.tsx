@@ -6,6 +6,7 @@ import { SLIDE_META } from "@/lib/slide-meta";
 import { SLIDES } from "@/components/slides";
 import PresenterHUD from "@/components/deck/PresenterHUD";
 import SlideJumpBar from "@/components/deck/SlideJumpBar";
+import PipelineZoomStage, { getPipelineMode } from "@/components/effects/PipelineZoomStage";
 
 // 뷰포트를 1920×1080 기준으로 스케일 피팅 (발표용 공통 트릭)
 function useStageScale() {
@@ -136,6 +137,7 @@ export default function Deck() {
 
   const meta = SLIDE_META[currentSlide];
   const SlideComponent = SLIDES[currentSlide];
+  const pipelineMode = getPipelineMode(currentSlide);
 
   return (
     <>
@@ -146,6 +148,9 @@ export default function Deck() {
           transform: `translate(-50%, -50%) scale(${scale})`,
         }}
       >
+        {/* 파이프라인 줌 persistent 레이어 — S10~S15 에서만 mount */}
+        {pipelineMode && <PipelineZoomStage mode={pipelineMode} />}
+
         {SlideComponent && meta && (
           <SlideComponent
             active={true}
