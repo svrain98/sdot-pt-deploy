@@ -37,11 +37,11 @@ export const IMAGE = {
   DECISION_CARD_UI: "/images/decision_card_ui.png",
   RU_C2_STILL: "/images/ru_c2_still.png",
   UA_SDOT_DASHBOARD: "/images/ua_sdot_dashboard.png",
-  // 파이프라인 줌 연출 (Cloudflare Images)
-  PIPELINE_OVERVIEW: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/f9910831-a9ce-4cd1-d966-e7279acdd900/public",
-  PIPELINE_EDGE: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/6d3b44c8-c3ab-4769-cbd0-dbba52a6e000/public",
-  PIPELINE_FOUNDRY: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/0c6778f1-e5e9-4ccc-d274-86481d8fe600/public",
-  PIPELINE_AIP: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/ed475b81-30bd-48cf-5a9c-1f1fddb18900/public",
+  // 파이프라인 줌 연출 (로컬 원본 PNG — 고해상도 유지)
+  PIPELINE_OVERVIEW: "/images/pipeline/overview.png",
+  PIPELINE_EDGE: "/images/pipeline/edge.png",
+  PIPELINE_FOUNDRY: "/images/pipeline/foundry.png",
+  PIPELINE_AIP: "/images/pipeline/aip.png",
 } as const;
 
 export const DATA = {
