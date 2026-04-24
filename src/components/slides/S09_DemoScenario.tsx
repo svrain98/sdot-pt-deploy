@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 import SlideFrame from "@/components/deck/SlideFrame";
 import type { SlideProps } from "@/types/slide";
 
-// 09 - 데모 시나리오: 아우디우카 전투
+// 09 — 데모 시나리오: 아우디우카 전투
 // 좌측: 타임라인 / 우측: 드론 탐지 스틸
-// step 1: 하단 핵심 질문 박스 등장
+// 러시아 통신두절 관점이 아닌, S-DOT 데모가 2차파 재진입을 포착했다는 점을 중심으로 서술
+// step 1: 하단 핵심 메시지 박스 선명화
 const TIMELINE = [
-  { time: "04:00Z", event: "러시아 포병 준비사격 개시", sub: "전차(T-80BVM) 6대 · 장갑차(BMP-2) 8대", warning: false },
-  { time: "05:00Z", event: "러시아 1제대 북측 축선 진입", sub: "", warning: false },
-  { time: "05:20Z", event: "1제대 격파 — 지뢰·대전차미사일로 통로 차단", sub: "", warning: false },
-  { time: "⚠️", event: "정보 단절", sub: "", warning: true },
-  { time: "06:30Z", event: "러시아 2제대 동일 축선 재진입", sub: "전차(T-72B3) 4대 · 장갑차(BMP-2) 6대", warning: false },
-  { time: "06:45Z", event: "2제대 동일 피해 반복", sub: "", warning: false },
+  { time: "04:00Z", event: "러시아 포병 준비사격 개시", sub: "전차(T-80BVM) 6대 · 장갑차(BMP-2) 8대", highlight: false },
+  { time: "05:00Z", event: "러시아 1제대 북측 축선 진입", sub: "", highlight: false },
+  { time: "05:20Z", event: "1제대 격파 — 지뢰·대전차미사일로 통로 차단", sub: "", highlight: false },
+  { time: "06:30Z", event: "러시아 2제대 동일 축선 재진입", sub: "전차(T-72B3) 4대 · 장갑차(BMP-2) 6대", highlight: true },
+  { time: "06:45Z", event: "2제대 동일 피해 반복", sub: "", highlight: false },
 ];
 
 export default function S09_DemoScenario({ meta, active, step }: SlideProps) {
@@ -29,7 +29,9 @@ export default function S09_DemoScenario({ meta, active, step }: SlideProps) {
           <h2 className="mt-4 text-[56px] font-black tracking-heading text-fg leading-[1.1]">
             데모 시나리오: 아우디우카 전투
           </h2>
-          <p className="mt-2 text-[26px] text-fg-muted">같은 축선, 두 번의 실패 — 왜 반복됐는가?</p>
+          <p className="mt-2 text-[26px] text-fg-muted">
+            S-DOT 데모가 <span className="text-accent font-semibold">2차파 재진입</span>을 스스로 포착했다
+          </p>
         </div>
 
         {/* 좌우 분할 */}
@@ -45,12 +47,12 @@ export default function S09_DemoScenario({ meta, active, step }: SlideProps) {
                 transition={{ duration: 0.4, delay: 0.15 + i * 0.12 }}
                 className="flex items-start gap-5"
               >
-                <span className={`w-[110px] shrink-0 text-[22px] font-bold text-right pt-1 ${t.warning ? "text-yellow-400" : "text-accent"}`}>
+                <span className={`w-[110px] shrink-0 text-[22px] font-bold text-right pt-1 ${t.highlight ? "text-accent" : "text-accent/70"}`}>
                   {t.time}
                 </span>
-                <span className={`mt-[10px] w-2.5 h-2.5 rounded-full shrink-0 ${t.warning ? "bg-yellow-400" : "bg-accent"}`} />
+                <span className={`mt-[10px] w-2.5 h-2.5 rounded-full shrink-0 ${t.highlight ? "bg-accent ring-2 ring-accent/40" : "bg-accent/70"}`} />
                 <div className="flex flex-col">
-                  <span className={`text-[24px] ${t.warning ? "font-bold text-yellow-400" : "text-fg-muted"}`}>
+                  <span className={`text-[24px] ${t.highlight ? "font-bold text-fg" : "text-fg-muted"}`}>
                     {t.event}
                   </span>
                   {t.sub && (
@@ -76,7 +78,7 @@ export default function S09_DemoScenario({ meta, active, step }: SlideProps) {
           </motion.div>
         </div>
 
-        {/* 핵심 질문 — 처음엔 흐리게, step 1에 선명 */}
+        {/* 핵심 메시지 — 처음엔 흐리게, step 1에 선명 */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={active ? { opacity: step >= 1 ? 1 : 0.2 } : { opacity: 0 }}
@@ -84,10 +86,10 @@ export default function S09_DemoScenario({ meta, active, step }: SlideProps) {
           className="mt-6 bg-bg-panel rounded-card border border-accent/30 p-6"
         >
           <p className="text-[24px] text-fg-muted leading-[1.7]">
-            우크라이나군은 지뢰지대와 대전차 미사일로 1제대를 막았습니다. 그 정보가 2제대에 전달됐다면 어땠을까요?
+            러시아 2제대가 1시간 10분 뒤 같은 축선으로 다시 들어온 이 실제 기록을 S-DOT 에 그대로 투입했습니다.
           </p>
           <p className="mt-3 text-[34px] font-bold text-accent">
-            전장 정보를 실시간으로 전파할 수 있는 기술이 있었다면, 같은 실수는 반복되지 않았을 것입니다.
+            Foundry Traceability 가 1파 기록과 2파 입력을 연결해, 동일 축선 재진입을 스스로 포착했습니다.
           </p>
         </motion.div>
 

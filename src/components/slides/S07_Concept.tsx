@@ -12,7 +12,7 @@ const LAYERS = [
     name: "Edge Layer",
     summary: "드론 영상 → AI 탐지 → 시맨틱 변환",
     duties: [
-      "YOLO 기반 객체·행위 탐지",
+      "Gemini 2.5 Flash VLM 기반 객체·행위 탐지",
       "NPU 온디바이스 추론 (Jetson Orin Nano)",
       "시맨틱 변환 (온톨로지 매핑)",
     ],

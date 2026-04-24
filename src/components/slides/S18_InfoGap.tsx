@@ -48,12 +48,13 @@ export default function S18_InfoGap({ meta, active, step }: SlideProps) {
         <MediaBackground
           slot="S18_scenario_part2_infogap"
           src={VIDEO.SCENARIO_PART2}
-          caption="2파 시나리오 (0~4s · 정보 단절 구간) — scenario_part2.mp4"
+          caption="2파 시나리오 (0~3s · 정보 단절 구간) — scenario_part2.mp4"
           // 단절 분위기를 위해 카드 단계에선 흑백, 영상 몰입 단계에선 컬러
           grayscale={!immersiveVideo}
           dim={immersiveVideo ? 0.08 : 0.42}
           startSeconds={0}
-          endSeconds={4}
+          // 영상 마지막 1초는 숨김 — 원본 4s → 3s
+          endSeconds={3}
           // step-based 재생
           paused={videoPaused}
           loop={false}

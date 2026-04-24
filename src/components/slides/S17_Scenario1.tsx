@@ -64,6 +64,8 @@ export default function S17_Scenario1({ meta, active, step }: SlideProps) {
           // step-based 재생 제어
           paused={videoPaused}
           loop={false}
+          // 영상을 1.5배속으로 재생해 호흡을 빠르게
+          playbackRate={1.5}
           onEnded={() => {
             // 영상이 끝나면 자동으로 step 2 로 넘어가 텍스트 복귀
             if (active && step < 2) {

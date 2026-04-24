@@ -198,20 +198,20 @@ function OverlayContent({ overlay }: { overlay: OverlayMeta }) {
 
 // 슬라이드 인덱스(0-based) → mode 매핑.
 // Deck.tsx 에서 호출 — null 이면 파이프라인 레이어를 unmount.
-// 통합 구조: S10=index 9 ~ S15=index 14
+// S09(데모 시나리오)가 KPI 뒤로 이동하면서 S10~S15 가 index 8~13 으로 당겨짐
 export function getPipelineMode(slideIndex: number): PipelineMode | null {
   switch (slideIndex) {
-    case 9:  // S10: 전체 파이프라인 overview
+    case 8:  // S10: 전체 파이프라인 overview
       return "overview";
-    case 10: // S11: Edge 확대
+    case 9:  // S11: Edge 확대
       return "edge";
-    case 11: // S12: 복귀
+    case 10: // S12: 복귀
       return "overview";
-    case 12: // S13: Foundry 확대
+    case 11: // S13: Foundry 확대
       return "foundry";
-    case 13: // S14: 복귀
+    case 12: // S14: 복귀
       return "overview";
-    case 14: // S15: AIP + 결심 확대
+    case 13: // S15: AIP + 결심 확대
       return "aip";
     default:
       return null;

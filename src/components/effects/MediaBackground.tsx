@@ -25,6 +25,8 @@ type Props = {
   paused?: boolean;
   loop?: boolean;
   onEnded?: () => void;
+  // 재생 속도 배율 (1 = 기본)
+  playbackRate?: number;
 };
 
 export default function MediaBackground({
@@ -41,6 +43,7 @@ export default function MediaBackground({
   paused,
   loop,
   onEnded,
+  playbackRate,
 }: Props) {
   return (
     <div className={clsx("absolute inset-0", className)}>
@@ -53,6 +56,7 @@ export default function MediaBackground({
           paused={paused}
           loop={loop}
           onEnded={onEnded}
+          playbackRate={playbackRate}
           style={grayscale ? { filter: "grayscale(100%) brightness(0.7)" } : undefined}
         />
       ) : (

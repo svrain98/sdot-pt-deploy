@@ -28,6 +28,7 @@ import SA1_Appendix_Bandwidth from "./SA1_Appendix_Bandwidth";
 
 // 슬라이드 인덱스 (0-based) 와 일치하는 컴포넌트 배열
 // 부록(SA1)은 현재 배포 제외 — 필요 시 끝에 추가
+// S09_DemoScenario 는 KPI(S16) 뒤로 이동 — 시나리오 소개를 1파 시뮬레이션 직전에 배치
 export const SLIDES: ComponentType<SlideProps>[] = [
   S01_Title,
   S02_Presenters,
@@ -37,7 +38,6 @@ export const SLIDES: ComponentType<SlideProps>[] = [
   S06_Paradigm,
   S07_Concept,
   S08_DemoConditions,
-  S09_DemoScenario,
   S10_PipelineOverview,
   S11_EdgeZoom,
   S12_PipelineReturn1,
@@ -45,6 +45,7 @@ export const SLIDES: ComponentType<SlideProps>[] = [
   S14_PipelineReturn2,
   S15_AIPZoom,
   S16_KPI,
+  S09_DemoScenario,
   S17_Scenario1,
   S18_InfoGap,
   S19_Scenario2,

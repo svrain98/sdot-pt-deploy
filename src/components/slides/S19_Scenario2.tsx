@@ -45,14 +45,15 @@ export default function S19_Scenario2({ meta, active, step }: SlideProps) {
         <MediaBackground
           slot="S19_scenario_part2_aip"
           src={VIDEO.SCENARIO_PART2}
-          caption="2파 시나리오 (4s~ · AIP 권고 구간) — scenario_part2.mp4"
+          caption="2파 시나리오 (3.5s~ · AIP 권고 구간) — scenario_part2.mp4"
           grayscale={false}
           // step 0/2: 좌측 그라디언트 mask + 옅은 dim. step 1: mask 걷고 영상 몰입
           dim={immersiveVideo ? 0.08 : 0.18}
           sideMask={immersiveVideo ? "none" : "left"}
           sideMaskWidth="55%"
           sideMaskStrength={0.82}
-          startSeconds={4}
+          // 시작점을 0.5초 앞당김 — 원본 4s → 3.5s
+          startSeconds={3.5}
           // step-based 재생
           paused={videoPaused}
           loop={false}

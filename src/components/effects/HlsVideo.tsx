@@ -31,6 +31,8 @@ type Props = {
   paused?: boolean;
   // 영상이 자연히 끝났을 때 호출 (loop=false + endSeconds 미설정 시).
   onEnded?: () => void;
+  // 재생 속도 배율 (1 = 기본). 예: 1.5 → 1.5배속
+  playbackRate?: number;
 };
 
 export default function HlsVideo({
@@ -47,6 +49,7 @@ export default function HlsVideo({
   respectGlobalPause = true,
   paused = false,
   onEnded,
+  playbackRate,
 }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const hlsRef = useRef<Hls | null>(null);
@@ -190,6 +193,17 @@ export default function HlsVideo({
       if (!bgVideoPaused) video.play().catch(() => {});
     }
   }, [paused, bgVideoPaused]);
+
+  // 재생 속도 반영 — src 가 바뀌면 element 가 재생성되므로 매 렌더마다 동기화
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (typeof playbackRate === "number" && playbackRate > 0) {
+      video.playbackRate = playbackRate;
+    } else {
+      video.playbackRate = 1;
+    }
+  }, [playbackRate, src]);
 
   return (
     <video
