@@ -16,13 +16,13 @@ const PRESENTERS = [
     name: "박민규",
     org: "모프시스템즈 CEO",
     role: "프로젝트 리드",
-    photo: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/ef0c5467-ddd7-4e43-4fc6-ec39640d9700/public",
+    photo: "/images/presenters/park_mingyu.png",
   },
   {
     name: "박윤서",
     org: "모프시스템즈 엔지니어",
     role: "시스템 개발",
-    photo: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/f176d884-18c6-453b-4159-b7610438a600/public",
+    photo: "/images/presenters/park_yunseo.png",
   },
   {
     name: "최강근",
