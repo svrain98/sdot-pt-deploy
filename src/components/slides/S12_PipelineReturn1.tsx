@@ -17,8 +17,8 @@ export default function S12_PipelineReturn1({ meta }: SlideProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.35 }}
       >
-        <div className="flex items-center gap-3 rounded-card border border-border bg-black/80 px-5 py-2 backdrop-blur-sm">
-          <span className="text-[16px] font-medium uppercase tracking-label text-fg-dim">
+        <div className="flex items-center gap-3 rounded-card border border-border bg-black/80 px-5 py-2.5 backdrop-blur-sm">
+          <span className="text-[20px] font-medium uppercase tracking-label text-fg-dim">
             Progress
           </span>
           <Dot state="done" label="Edge" />
@@ -38,7 +38,7 @@ export default function S12_PipelineReturn1({ meta }: SlideProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.55 }}
       >
-        <p className="rounded-card border border-border bg-black/80 px-6 py-3 text-[26px] font-medium leading-[1.3] text-fg-muted backdrop-blur-sm">
+        <p className="rounded-card border border-border bg-black/80 px-7 py-4 text-[32px] font-medium leading-[1.3] text-fg-muted backdrop-blur-sm">
           온톨로지 데이터가 쌓이는 곳 —{" "}
           <span className="text-accent">Foundry 빅데이터 플랫폼</span>
         </p>
@@ -62,7 +62,7 @@ function Dot({
       : "border border-border text-fg-dim";
   return (
     <span
-      className={`inline-flex items-center gap-2 rounded px-2.5 py-1 text-[14px] font-medium uppercase tracking-label ${color}`}
+      className={`inline-flex items-center gap-2 rounded px-3 py-1.5 text-[18px] font-medium uppercase tracking-label ${color}`}
     >
       {state === "done" ? "✓" : "•"} {label}
     </span>

@@ -77,31 +77,33 @@ export default function S19_Scenario2({ meta, active, step }: SlideProps) {
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="inline-block rounded-card border border-accent/60 bg-black/70 px-3 py-1.5 text-[18px] font-medium uppercase tracking-label text-accent backdrop-blur-sm">
+                <div className="inline-block rounded-card border border-accent/60 bg-black/70 px-3 py-1.5 text-[20px] font-medium uppercase tracking-label text-accent backdrop-blur-sm">
                   Simulation 2 · Result · Traceability + AIP Logic
                 </div>
-                <h2 className="mt-4 text-[56px] font-black leading-[1.1] tracking-heading text-fg drop-shadow-lg">
+                <h2 className="mt-4 text-[60px] font-black leading-[1.1] tracking-heading text-fg drop-shadow-lg">
                   시뮬레이션 결과 —{" "}
-                  <span className="text-accent">Traceability</span>가 잡아냈다
+                  <span className="text-accent">Traceability</span>가
+                  잡아냈습니다
                 </h2>
-                <p className="mt-5 max-w-[560px] rounded-card bg-black/60 px-5 py-4 text-[21px] leading-[1.55] text-fg-muted backdrop-blur-sm">
+                <p className="mt-5 max-w-[620px] rounded-card bg-black/60 px-5 py-4 text-[24px] leading-[1.55] text-fg-muted backdrop-blur-sm">
                   2파 재진입 데이터가 들어오는 순간, Foundry Traceability 가{" "}
                   <span className="font-bold text-fg">
                     수많은 전장 데이터 중 1파 진격·전멸 AAR
                   </span>
-                  을 매칭.{" "}
+                  을 매칭했습니다.{" "}
                   <span className="font-bold text-accent">
                     동일 경로 재진입
                   </span>
-                  을 스스로 플래그했다. AIP 5단계가 LLM 위협평가 → Pk 계산 →
-                  Fire Mission 생성 →{" "}
+                  을 스스로 플래그했습니다. AIP 5단계가 LLM 위협평가 → Pk 계산
+                  → Fire Mission 생성 →{" "}
                   <span className="font-bold text-accent">AI 타격 추천</span>
-                  까지 자동 수행 — 실제 전장에서 요구되는 판단 흐름과 부합했다.
+                  까지 자동 수행하면서 — 실제 전장에서 요구되는 판단 흐름과
+                  부합했습니다.
                 </p>
 
                 {/* step 0 에선 안내 힌트, step 2 에선 APPROVE 배너 */}
                 {step === 0 && (
-                  <div className="mt-5 font-mono text-[14px] uppercase tracking-[0.25em] text-accent/80">
+                  <div className="mt-5 font-mono text-[16px] uppercase tracking-[0.25em] text-accent/80">
                     ▸ space — play video
                   </div>
                 )}
@@ -110,7 +112,7 @@ export default function S19_Scenario2({ meta, active, step }: SlideProps) {
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.55, delay: 0.6 }}
-                    className="mt-6 inline-block rounded-card border border-accent bg-accent/15 px-5 py-3 text-[22px] font-black tracking-heading text-accent backdrop-blur-sm"
+                    className="mt-6 inline-block rounded-card border border-accent bg-accent/15 px-5 py-3 text-[26px] font-black tracking-heading text-accent backdrop-blur-sm"
                   >
                     AI 타격 추천 · APPROVE → CFF
                   </motion.div>
@@ -134,14 +136,14 @@ export default function S19_Scenario2({ meta, active, step }: SlideProps) {
                   className="relative rounded-card border border-accent/40 bg-black/75 px-6 py-4 backdrop-blur-sm"
                 >
                   <div className="flex items-start gap-5">
-                    <div className="flex h-[58px] w-[58px] shrink-0 items-center justify-center rounded-card border border-accent/70 bg-black/80 font-mono text-[26px] font-black text-accent">
+                    <div className="flex h-[64px] w-[64px] shrink-0 items-center justify-center rounded-card border border-accent/70 bg-black/80 font-mono text-[28px] font-black text-accent">
                       {s.n}
                     </div>
                     <div>
-                      <div className="text-[24px] font-black leading-[1.2] text-fg">
+                      <div className="text-[28px] font-black leading-[1.2] text-fg">
                         {s.head}
                       </div>
-                      <div className="mt-1 text-[19px] leading-[1.5] text-fg-muted">
+                      <div className="mt-1 text-[22px] leading-[1.5] text-fg-muted">
                         {s.body}
                       </div>
                     </div>

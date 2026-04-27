@@ -10,11 +10,11 @@ const LAYERS = [
   {
     code: "L1",
     name: "Edge Layer",
-    summary: "드론 영상 → AI 탐지 → 시맨틱 변환",
+    summary: "드론 영상 → AI 분석 → 시맨틱 변환",
     duties: [
-      "Gemini 2.5 Flash VLM 기반 객체·행위 탐지",
-      "NPU 온디바이스 추론 (Jetson Orin Nano)",
-      "시맨틱 변환 (온톨로지 매핑)",
+      "VLM(Vision Language Model) 기반",
+      "온디바이스(On-device) 추론",
+      "시맨틱(의미) 데이터로 변환",
     ],
   },
   {
@@ -23,7 +23,7 @@ const LAYERS = [
     summary: "압축 · 서명 · 전술망 전송",
     duties: [
       "시맨틱 데이터 → 바이너리 압축",
-      "무결성 서명 적용",
+      "위·변조 방지 서명 적용",
       "헤더 오버헤드 최소화",
     ],
   },
@@ -48,7 +48,7 @@ export default function S07_Concept({ meta, active, step }: SlideProps) {
           <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent">
             System Concept · 3-Layer Architecture
           </div>
-          <h2 className="mt-4 text-[56px] font-black tracking-heading text-fg leading-[1.1]">
+          <h2 className="mt-4 text-[64px] font-black tracking-heading text-fg leading-[1.1]">
             S-DOT 시스템 개념도
           </h2>
         </div>
@@ -87,7 +87,7 @@ export default function S07_Concept({ meta, active, step }: SlideProps) {
                   {l.duties.map((d) => (
                     <li
                       key={d}
-                      className="flex items-start gap-2 text-[24px] text-fg-muted"
+                      className="flex items-start gap-2 text-[28px] text-fg-muted"
                     >
                       <span className="mt-[7px] block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
                       <span>{d}</span>

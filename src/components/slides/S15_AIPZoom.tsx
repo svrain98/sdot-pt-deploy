@@ -17,10 +17,10 @@ export default function S15_AIPZoom({ meta }: SlideProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.2 }}
       >
-        <div className="inline-block rounded-card border border-accent/60 bg-black/80 px-4 py-1.5 text-[18px] font-medium uppercase tracking-label text-accent backdrop-blur-sm">
+        <div className="inline-block rounded-card border border-accent/60 bg-black/80 px-4 py-1.5 text-[22px] font-medium uppercase tracking-label text-accent backdrop-blur-sm">
           Stage 3·4 · AIP Logic + Commander Decision
         </div>
-        <h2 className="mt-3 rounded-card border border-border bg-black/80 px-5 py-3 text-[36px] font-black leading-[1.1] tracking-heading text-fg backdrop-blur-sm">
+        <h2 className="mt-3 rounded-card border border-border bg-black/80 px-5 py-3 text-[48px] font-black leading-[1.1] tracking-heading text-fg backdrop-blur-sm">
           5단계 AI 분석 →{" "}
           <span className="text-accent">지휘관 결심 지원</span>
         </h2>
@@ -56,12 +56,12 @@ function StageCell({
   highlight?: boolean;
 }) {
   return (
-    <div className="flex min-w-[220px] flex-col items-center justify-center px-6 py-4 text-center">
+    <div className="flex min-w-[230px] flex-col items-center justify-center px-6 py-4 text-center">
       <div
         className={
           highlight
-            ? "font-mono text-[14px] font-bold uppercase tracking-label text-accent"
-            : "font-mono text-[14px] font-medium uppercase tracking-label text-fg-dim"
+            ? "font-mono text-[18px] font-bold uppercase tracking-label text-accent"
+            : "font-mono text-[18px] font-medium uppercase tracking-label text-fg-dim"
         }
       >
         Stage {n}
@@ -69,13 +69,13 @@ function StageCell({
       <div
         className={
           highlight
-            ? "mt-1 text-[20px] font-black text-accent"
-            : "mt-1 text-[20px] font-black text-fg"
+            ? "mt-1 text-[26px] font-black text-accent"
+            : "mt-1 text-[26px] font-black text-fg"
         }
       >
         {label}
       </div>
-      <div className="mt-0.5 text-[14px] text-fg-muted">{note}</div>
+      <div className="mt-1 text-[18px] text-fg-muted">{note}</div>
     </div>
   );
 }

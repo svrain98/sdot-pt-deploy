@@ -39,13 +39,13 @@ export default function S20_NextStep({ meta, active, step }: SlideProps) {
           transition={{ duration: 0.55 }}
           className="w-full"
         >
-          <div className="inline-block rounded-card border border-accent/60 bg-black/60 px-3 py-1.5 text-[18px] font-medium uppercase tracking-label text-accent">
+          <div className="inline-block rounded-card border border-accent/60 bg-black/60 px-3 py-1.5 text-[22px] font-medium uppercase tracking-label text-accent">
             Next Step · Why the whole stack?
           </div>
-          <h2 className="mt-4 text-[60px] font-black leading-[1.1] tracking-heading text-fg">
+          <h2 className="mt-4 text-[64px] font-black leading-[1.1] tracking-heading text-fg">
             세 가지가 <span className="text-accent">하나</span>로 연결될 때
           </h2>
-          <p className="mt-3 max-w-[1100px] text-[22px] leading-[1.6] text-fg-muted">
+          <p className="mt-4 max-w-[1200px] text-[26px] leading-[1.6] text-fg-muted">
             온톨로지 변환 · 빅데이터 플랫폼 · LLM — 이 셋 중 하나만 있어도 완성되지 않는다.
             S-DOT 는 <span className="font-bold text-fg">셋을 하나의 플랫폼</span>으로
             묶어, 기존 ISR → C2 경로를{" "}
@@ -65,17 +65,17 @@ export default function S20_NextStep({ meta, active, step }: SlideProps) {
               className="flex flex-col rounded-card border border-border bg-bg-panel/80 px-7 py-6"
             >
               <div className="flex items-baseline gap-3">
-                <span className="font-mono text-[20px] font-black text-accent">
+                <span className="font-mono text-[24px] font-black text-accent">
                   {p.n}
                 </span>
-                <span className="text-[20px] font-medium uppercase tracking-label text-fg-dim">
+                <span className="text-[22px] font-medium uppercase tracking-label text-fg-dim">
                   {p.key}
                 </span>
               </div>
-              <div className="mt-3 text-[28px] font-black leading-[1.2] text-fg">
+              <div className="mt-3 text-[32px] font-black leading-[1.2] text-fg">
                 {p.head}
               </div>
-              <div className="mt-4 text-[19px] leading-[1.55] text-fg-muted">
+              <div className="mt-4 text-[22px] leading-[1.55] text-fg-muted">
                 {p.body}
               </div>
             </motion.div>
@@ -89,7 +89,7 @@ export default function S20_NextStep({ meta, active, step }: SlideProps) {
           transition={{ duration: 0.7, delay: 0.9 }}
           className="mt-auto self-center rounded-card border border-accent bg-accent/10 px-8 py-4"
         >
-          <div className="text-center text-[26px] font-black leading-[1.3] tracking-heading text-fg">
+          <div className="text-center text-[30px] font-black leading-[1.3] tracking-heading text-fg">
             S-DOT ={" "}
             <span className="text-accent">
               Ontology · Big Data · LLM

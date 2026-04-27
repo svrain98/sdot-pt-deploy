@@ -10,8 +10,8 @@ import type { SlideProps } from "@/types/slide";
 // 17 — 1파 시뮬레이션 · 아우디우카 (3-step 리허설 플로우)
 // 스토리: 러시아 1파 기동 데이터를 S-DOT 에 넣고 시뮬레이션을 돌려본 결과,
 //          AIP Logic 이 내놓은 방어 방안이 실제 2023-10-10 우크라이나 군의 대응과
-//          부합했다. 결과를 미리 보고 맞춘 것이 아니라, 같은 상황에서 같은 판단에
-//          도달했다는 검증.
+//          부합했습니다. 결과를 미리 보고 맞춘 것이 아니라, 같은 상황에서 같은
+//          판단에 도달했다는 검증입니다.
 // ─ step 0 : 좌측 "1파 시뮬레이션" 타이틀 + 영상 첫 프레임 정지
 // ─ step 1 : 텍스트 fade-out → 영상 전면 재생 (소리 없이, 좌측 mask 도 걷어냄)
 // ─ step 2 : 영상 끝(또는 Space) → 좌측 텍스트 복귀 + 우측 BEAT 01/02/03 stagger in
@@ -33,7 +33,7 @@ const WAVE1_BEATS = [
     code: "BEAT-03",
     label: "실제 결과와 부합",
     head: "우크라이나 군이 현장에서 선택한 대응과 동일",
-    note: "2023-10-10 실제 AAR: 동일 교차화력 전술로 1제대 전멸. 같은 상황에서 같은 판단.",
+    note: "2023-10-10 실제 AAR: 동일 교차화력 전술로 1제대 전멸. 같은 상황에서 같은 판단입니다.",
   },
 ];
 
@@ -87,15 +87,15 @@ export default function S17_Scenario1({ meta, active, step }: SlideProps) {
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="inline-block rounded-card border border-accent/60 bg-black/70 px-3 py-1.5 text-[18px] font-medium uppercase tracking-label text-accent backdrop-blur-sm">
+                <div className="inline-block rounded-card border border-accent/60 bg-black/70 px-3 py-1.5 text-[20px] font-medium uppercase tracking-label text-accent backdrop-blur-sm">
                   Simulation 1 · Ukrainian Response · Avdiivka 2023-10-10
                 </div>
-                <h2 className="mt-4 text-[60px] font-black leading-[1.1] tracking-heading text-fg drop-shadow-lg">
+                <h2 className="mt-4 text-[64px] font-black leading-[1.1] tracking-heading text-fg drop-shadow-lg">
                   S-DOT 의 추천이
                   <br />
-                  <span className="text-accent">실제 대응과 부합했다</span>
+                  <span className="text-accent">실제 대응과 부합했습니다</span>
                 </h2>
-                <p className="mt-5 max-w-[640px] rounded-card bg-black/55 px-5 py-4 text-[22px] leading-[1.6] text-fg-muted backdrop-blur-sm">
+                <p className="mt-5 max-w-[680px] rounded-card bg-black/55 px-5 py-4 text-[26px] leading-[1.6] text-fg-muted backdrop-blur-sm">
                   러시아 1파 기동 데이터를{" "}
                   <span className="font-bold text-fg">S-DOT</span> 에 그대로
                   넣고 시뮬레이션을 돌렸다. AIP Logic 이 스스로 내놓은 방어
@@ -107,12 +107,12 @@ export default function S17_Scenario1({ meta, active, step }: SlideProps) {
                   <span className="font-bold text-accent">
                     2023-10-10 실제 우크라이나 군이 현장에서 선택한 대응
                   </span>
-                  과 부합했다.
+                  과 부합했습니다.
                   <br />
-                  같은 상황에서 같은 판단에 도달했다는 검증이다.
+                  같은 상황에서 같은 판단에 도달했다는 검증입니다.
                 </p>
                 {step === 0 && (
-                  <div className="mt-5 font-mono text-[14px] uppercase tracking-[0.25em] text-accent/80">
+                  <div className="mt-5 font-mono text-[16px] uppercase tracking-[0.25em] text-accent/80">
                     ▸ space — play video
                   </div>
                 )}
@@ -135,17 +135,17 @@ export default function S17_Scenario1({ meta, active, step }: SlideProps) {
                   className="rounded-card border border-accent/40 bg-black/75 px-5 py-4 backdrop-blur-sm"
                 >
                   <div className="flex items-baseline gap-3">
-                    <span className="font-mono text-[16px] font-bold uppercase tracking-label text-accent">
+                    <span className="font-mono text-[18px] font-bold uppercase tracking-label text-accent">
                       {b.code}
                     </span>
-                    <span className="text-[18px] font-medium uppercase tracking-label text-fg-dim">
+                    <span className="text-[20px] font-medium uppercase tracking-label text-fg-dim">
                       {b.label}
                     </span>
                   </div>
-                  <div className="mt-1 text-[22px] font-black text-fg">
+                  <div className="mt-1 text-[26px] font-black text-fg">
                     {b.head}
                   </div>
-                  <div className="mt-1 text-[18px] text-fg-muted">{b.note}</div>
+                  <div className="mt-1 text-[20px] text-fg-muted">{b.note}</div>
                 </motion.div>
               ))}
           </AnimatePresence>

@@ -22,7 +22,7 @@ export default function S08_KPI({ meta, active, step }: SlideProps) {
               <span className="text-accent">COSE Sealed</span>
             </h2>
           </div>
-          <div className="text-[20px] font-medium uppercase tracking-label text-fg-dim">
+          <div className="text-[22px] font-medium uppercase tracking-label text-fg-dim">
             best: Mode B + COSE · 74 B · 94 ms
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function S08_KPI({ meta, active, step }: SlideProps) {
           animate={active && step >= 1 ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="mb-6 text-[20px] font-medium uppercase tracking-label text-fg-dim">
+          <div className="mb-6 text-[22px] font-medium uppercase tracking-label text-fg-dim">
             Format Size Comparison
           </div>
           <BarChart

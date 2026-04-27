@@ -82,10 +82,12 @@ export default function S06_Paradigm({ meta, active, step }: SlideProps) {
           animate={active && step >= 1 ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <p className="text-[28px] text-fg-muted leading-[1.9]">
-            전장에서 필요한 핵심 정보만 <span className="text-accent">→</span> 전송량 99% 감축<br />
-            불안정한 전장 환경에서도 <span className="text-accent">→</span> 전송 보장<br />
-            기계가 읽는 구조화된 언어 <span className="text-accent">→</span> <span className="text-accent font-bold">AI 즉시 이해</span>
+          <p className="text-[32px] text-fg-muted leading-[1.9]">
+            결심에 필요한 의미만 전송 <span className="text-accent">→</span> 전송량 대폭 감축<br />
+            전송량 최소화<span className="text-accent">→</span> 전자전 위협 대비<br />
+            
+            <span className="font-bold text-accent">온톨로지 </span>
+            데이터 <span className="text-accent">→</span> AI가<span className="text-accent font-bold"> 맥락</span>을 이해·전파·판단
           </p>
         </motion.div>
       </div>

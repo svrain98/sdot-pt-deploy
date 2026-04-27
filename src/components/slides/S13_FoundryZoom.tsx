@@ -16,10 +16,10 @@ export default function S13_FoundryZoom({ meta }: SlideProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.2 }}
       >
-        <div className="inline-block rounded-card border border-accent/60 bg-black/80 px-4 py-1.5 text-[18px] font-medium uppercase tracking-label text-accent backdrop-blur-sm">
+        <div className="inline-block rounded-card border border-accent/60 bg-black/80 px-4 py-1.5 text-[22px] font-medium uppercase tracking-label text-accent backdrop-blur-sm">
           Stage 2 · Palantir Foundry · Ontology
         </div>
-        <h2 className="mt-3 rounded-card border border-border bg-black/80 px-5 py-3 text-[36px] font-black leading-[1.1] tracking-heading text-fg backdrop-blur-sm">
+        <h2 className="mt-3 rounded-card border border-border bg-black/80 px-5 py-3 text-[44px] font-black leading-[1.1] tracking-heading text-fg backdrop-blur-sm">
           16 Object Types — 수많은 전장 데이터를 잇는{" "}
           <span className="text-accent">Traceability 그래프</span>
         </h2>
@@ -53,15 +53,15 @@ function StatCell({
   tone: "accent" | "muted";
 }) {
   return (
-    <div className="flex min-w-[200px] flex-col items-center justify-center px-6 py-4">
-      <div className="text-[14px] font-medium uppercase tracking-label text-fg-dim">
+    <div className="flex min-w-[210px] flex-col items-center justify-center px-6 py-4">
+      <div className="text-[18px] font-medium uppercase tracking-label text-fg-dim">
         {label}
       </div>
       <div
         className={
           tone === "accent"
-            ? "mt-1 font-mono text-[22px] font-black text-accent"
-            : "mt-1 font-mono text-[22px] font-black text-fg"
+            ? "mt-1 font-mono text-[28px] font-black text-accent"
+            : "mt-1 font-mono text-[28px] font-black text-fg"
         }
       >
         {value}

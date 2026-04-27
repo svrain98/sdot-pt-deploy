@@ -84,3 +84,9 @@ export const useDeckStore = create<DeckState>((set, get) => ({
 
   setTotalSlides: (n) => set({ totalSlides: n }),
 }));
+
+// PDF export / e2e 자동화에서 store 를 직접 제어할 수 있도록 브라우저 전역에 노출
+if (typeof window !== "undefined") {
+  (window as unknown as { __deckStore?: typeof useDeckStore }).__deckStore =
+    useDeckStore;
+}

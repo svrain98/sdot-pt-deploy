@@ -44,3 +44,6 @@ public/data/decision_points.json
 public/data/c2_status.json
 .omc/
 public/references/
+
+# PDF export 디버그 PNG 캐시
+.pdf-cache/

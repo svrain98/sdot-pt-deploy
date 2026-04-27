@@ -35,45 +35,46 @@ export default function S01_Title({ meta, active }: SlideProps) {
         </motion.div>
 
         {/* 메인 타이틀 */}
-        <div className="flex flex-1 flex-col justify-center">
+        <div className="flex flex-1 flex-col justify-center -mt-16 pb-40">
+
+          {/* S-DOT 약어 + 풀네임 */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={active ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <div className="flex items-baseline gap-5">
+              <p className="text-[72px] font-black tracking-heading text-accent leading-none">
+                S-DOT
+              </p>
+              <p className="text-[32px] font-light tracking-widest text-fg-muted leading-none">
+                <span className="text-fg font-bold">S</span><span className="tracking-wider">emantic</span>{" "}
+                <span className="text-fg font-bold">D</span><span className="tracking-wider">ata</span>{" "}
+                <span className="text-fg font-bold">O</span><span className="tracking-wider">n</span>{" "}
+                <span className="text-fg font-bold">T</span><span className="tracking-wider">actical-network</span>{" "}
+              </p>
+            </div>
+          </motion.div>
+
+          {/* 메인 타이틀 */}
           <motion.h1
-            className="text-[90px] font-black tracking-heading text-fg leading-[1.3]"
+            className="mt-8 text-[84px] font-black tracking-heading text-fg leading-[1.15]"
             initial={{ opacity: 0, y: 30 }}
             animate={active ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, delay: 0.4 }}
+            transition={{ duration: 1, delay: 0.7 }}
           >
-            현대 전장의 전술통신망 한계를 극복하는
-            <br />
-            <span className="text-accent">시맨틱 데이터 전송 기술 S-DOT</span>
+            엣지 AI 기반 초경량 시맨틱 전송 기술
           </motion.h1>
-
-          {/* 약어 풀이 */}
-          <motion.div
-            className="mt-10 flex items-center gap-4"
-            initial={{ opacity: 0 }}
-            animate={active ? { opacity: 1 } : {}}
-            transition={{ duration: 0.8, delay: 1.0 }}
-          >
-            <span className="text-[24px] font-bold text-accent">S-DOT</span>
-            <span className="text-[20px] text-fg-dim">=</span>
-            <span className="text-[20px] text-fg-muted">
-              <strong className="text-fg">S</strong>emantic{" "}
-              <strong className="text-fg">D</strong>ata{" "}
-              <strong className="text-fg">O</strong>n{" "}
-              <strong className="text-fg">T</strong>actical-network
-            </span>
-          </motion.div>
 
           {/* 구분선 + 서브 메시지 */}
           <motion.div
-            className="mt-8 border-t border-border pt-8"
+            className="mt-12 border-t border-border pt-6"
             initial={{ opacity: 0 }}
             animate={active ? { opacity: 1 } : {}}
-            transition={{ duration: 0.8, delay: 1.4 }}
+            transition={{ duration: 0.8, delay: 1.6 }}
           >
-            <p className="text-[24px] text-fg-muted leading-[1.7]">
-              Edge AI 기반 초경량 시맨틱 전송 체계 —
-              99% 데이터 감축, 제한된 전장 네트워크에서도 전송 보장
+            <p className="text-[34px] text-fg-muted leading-[1.7]">
+              영상 데이터의 99% 감축 — 대역폭 제한·전자전 위협·정보 과부하 동시 해결
             </p>
           </motion.div>
         </div>
@@ -82,9 +83,9 @@ export default function S01_Title({ meta, active }: SlideProps) {
         <motion.div
           initial={{ opacity: 0 }}
           animate={active ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8, delay: 1.8 }}
+          transition={{ duration: 0.8, delay: 2.0 }}
         >
-          <p className="text-[20px] font-medium uppercase tracking-label text-fg-dim">
+          <p className="text-[22px] font-medium uppercase tracking-label text-fg-dim">
             Edge AI · Semantic Communication · Tactical Network
           </p>
         </motion.div>

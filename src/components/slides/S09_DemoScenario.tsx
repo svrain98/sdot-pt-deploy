@@ -26,11 +26,11 @@ export default function S09_DemoScenario({ meta, active, step }: SlideProps) {
           <div className="inline-block border border-accent/50 px-3 py-1.5 rounded-card text-[20px] font-medium uppercase tracking-label text-accent">
             DAY 1 · 2023-10-10 · AVDIIVKA
           </div>
-          <h2 className="mt-4 text-[56px] font-black tracking-heading text-fg leading-[1.1]">
+          <h2 className="mt-4 text-[64px] font-black tracking-heading text-fg leading-[1.1]">
             데모 시나리오: 아우디우카 전투
           </h2>
-          <p className="mt-2 text-[26px] text-fg-muted">
-            S-DOT 데모가 <span className="text-accent font-semibold">2차파 재진입</span>을 스스로 포착했다
+          <p className="mt-2 text-[28px] text-fg-muted">
+            S-DOT 데모가 <span className="text-accent font-semibold">2차파 재진입</span>을 스스로 포착했습니다
           </p>
         </div>
 
@@ -47,16 +47,16 @@ export default function S09_DemoScenario({ meta, active, step }: SlideProps) {
                 transition={{ duration: 0.4, delay: 0.15 + i * 0.12 }}
                 className="flex items-start gap-5"
               >
-                <span className={`w-[110px] shrink-0 text-[22px] font-bold text-right pt-1 ${t.highlight ? "text-accent" : "text-accent/70"}`}>
+                <span className={`w-[120px] shrink-0 text-[24px] font-bold text-right pt-1 ${t.highlight ? "text-accent" : "text-accent/70"}`}>
                   {t.time}
                 </span>
-                <span className={`mt-[10px] w-2.5 h-2.5 rounded-full shrink-0 ${t.highlight ? "bg-accent ring-2 ring-accent/40" : "bg-accent/70"}`} />
+                <span className={`mt-[12px] w-3 h-3 rounded-full shrink-0 ${t.highlight ? "bg-accent ring-2 ring-accent/40" : "bg-accent/70"}`} />
                 <div className="flex flex-col">
-                  <span className={`text-[24px] ${t.highlight ? "font-bold text-fg" : "text-fg-muted"}`}>
+                  <span className={`text-[26px] ${t.highlight ? "font-bold text-fg" : "text-fg-muted"}`}>
                     {t.event}
                   </span>
                   {t.sub && (
-                    <span className="text-[20px] text-fg-dim mt-0.5">{t.sub}</span>
+                    <span className="text-[22px] text-fg-dim mt-0.5">{t.sub}</span>
                   )}
                 </div>
               </motion.div>
@@ -85,10 +85,10 @@ export default function S09_DemoScenario({ meta, active, step }: SlideProps) {
           transition={{ duration: 0.6, delay: step >= 1 ? 0.2 : 0.8 }}
           className="mt-6 bg-bg-panel rounded-card border border-accent/30 p-6"
         >
-          <p className="text-[24px] text-fg-muted leading-[1.7]">
+          <p className="text-[26px] text-fg-muted leading-[1.7]">
             러시아 2제대가 1시간 10분 뒤 같은 축선으로 다시 들어온 이 실제 기록을 S-DOT 에 그대로 투입했습니다.
           </p>
-          <p className="mt-3 text-[34px] font-bold text-accent">
+          <p className="mt-3 text-[36px] font-bold text-accent">
             Foundry Traceability 가 1파 기록과 2파 입력을 연결해, 동일 축선 재진입을 스스로 포착했습니다.
           </p>
         </motion.div>

@@ -18,10 +18,10 @@ export default function S11_EdgeZoom({ meta }: SlideProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.2 }}
       >
-        <div className="inline-block rounded-card border border-accent/60 bg-black/80 px-4 py-1.5 text-[18px] font-medium uppercase tracking-label text-accent backdrop-blur-sm">
+        <div className="inline-block rounded-card border border-accent/60 bg-black/80 px-4 py-1.5 text-[22px] font-medium uppercase tracking-label text-accent backdrop-blur-sm">
           Stage 1 · Edge · VLM Ontology Conversion
         </div>
-        <h2 className="mt-3 rounded-card border border-border bg-black/80 px-5 py-3 text-[36px] font-black leading-[1.1] tracking-heading text-fg backdrop-blur-sm">
+        <h2 className="mt-3 rounded-card border border-border bg-black/80 px-5 py-3 text-[48px] font-black leading-[1.1] tracking-heading text-fg backdrop-blur-sm">
           드론 영상 →{" "}
           <span className="text-accent">온톨로지 데이터</span>
         </h2>
@@ -56,15 +56,15 @@ function StatCell({
   tone: "accent" | "muted";
 }) {
   return (
-    <div className="flex min-w-[170px] flex-col items-center justify-center px-6 py-4">
-      <div className="text-[14px] font-medium uppercase tracking-label text-fg-dim">
+    <div className="flex min-w-[180px] flex-col items-center justify-center px-6 py-4">
+      <div className="text-[18px] font-medium uppercase tracking-label text-fg-dim">
         {label}
       </div>
       <div
         className={
           tone === "accent"
-            ? "mt-1 font-mono text-[28px] font-black text-accent"
-            : "mt-1 font-mono text-[28px] font-black text-fg"
+            ? "mt-1 font-mono text-[32px] font-black text-accent"
+            : "mt-1 font-mono text-[32px] font-black text-fg"
         }
       >
         {value}

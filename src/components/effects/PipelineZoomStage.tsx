@@ -217,3 +217,33 @@ export function getPipelineMode(slideIndex: number): PipelineMode | null {
       return null;
   }
 }
+
+// LinkedIn 발표 버전 인덱스 매핑 (KPI 제외, AIP 포함, 인트로(S07) 추가됨)
+//   idx 0: S07 — 인트로 (파이프라인 레이어 unmount)
+//   idx 1: S10 — overview
+//   idx 2: S11 — edge
+//   idx 3: S12 — overview (복귀)
+//   idx 4: S13 — foundry
+//   idx 5: S14 — overview (복귀)
+//   idx 6: S15 — aip + 결심
+//   idx 7+ : 데모/시나리오/시뮬레이션 — 파이프라인 줌 레이어 unmount
+export function getLinkedInPipelineMode(
+  slideIndex: number
+): PipelineMode | null {
+  switch (slideIndex) {
+    case 1:
+      return "overview";
+    case 2:
+      return "edge";
+    case 3:
+      return "overview";
+    case 4:
+      return "foundry";
+    case 5:
+      return "overview";
+    case 6:
+      return "aip";
+    default:
+      return null;
+  }
+}

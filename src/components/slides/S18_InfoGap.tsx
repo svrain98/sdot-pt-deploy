@@ -8,10 +8,10 @@ import { useDeckStore } from "@/lib/store";
 import type { SlideProps } from "@/types/slide";
 
 // 18 — 2파 재진입 시뮬레이션 셋업 (3-step 리허설 플로우)
-// 스토리: 실제 역사에서 러시아 2제대가 같은 축선으로 재진입했다. 이 재진입 데이터를
-//         S-DOT 에 그대로 넣고 시뮬레이션을 돌리면, Foundry Traceability 가 1파 기록과
-//         연결해 동일 경로 재진입을 스스로 식별할 수 있는가. 다음 장에서 실제 결과와
-//         부합하는지 확인한다.
+// 스토리: 실제 역사에서 러시아 2제대가 같은 축선으로 재진입했습니다. 이 재진입
+//         데이터를 S-DOT 에 그대로 넣고 시뮬레이션을 돌리면, Foundry Traceability
+//         가 1파 기록과 연결해 동일 경로 재진입을 스스로 식별할 수 있을까요. 다음
+//         장에서 실제 결과와 부합하는지 확인합니다.
 // ─ step 0 : 타이틀 노출 + 영상(0s) 첫 프레임 정지
 // ─ step 1 : 타이틀 hide + 영상 0~4s 전면 재생 (loop 없음)
 // ─ step 2 : 영상 끝 → 타이틀 복귀 + INPUT / QUESTION / CHECK 3카드 + 귀결 문장
@@ -23,13 +23,13 @@ const GAPS = [
   },
   {
     tag: "QUESTION",
-    head: "Traceability 가 잡아내는가",
-    body: "1파 기록과 2파 입력을 Foundry 온톨로지 위에서 비교할 때, 동일 경로 재진입을 S-DOT 가 스스로 식별할 수 있는가.",
+    head: "Traceability 가 잡아낼까요",
+    body: "1파 기록과 2파 입력을 Foundry 온톨로지 위에서 비교할 때, 동일 경로 재진입을 S-DOT 가 스스로 식별할 수 있을까요.",
   },
   {
     tag: "CHECK",
     head: "실제 결과와 부합하는지 확인",
-    body: "AIP Logic · LLM 위협평가 · 타격 추천 — 이 흐름이 현장의 상황 판단과 맞닿는지 다음 장에서 검증한다.",
+    body: "AIP Logic · LLM 위협평가 · 타격 추천 — 이 흐름이 현장의 상황 판단과 맞닿는지 다음 장에서 검증합니다.",
   },
 ];
 
@@ -77,16 +77,16 @@ export default function S18_InfoGap({ meta, active, step }: SlideProps) {
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="inline-block rounded-card border border-accent/60 bg-black/70 px-3 py-1.5 text-[18px] font-medium uppercase tracking-label text-accent backdrop-blur-sm">
+              <div className="inline-block rounded-card border border-accent/60 bg-black/70 px-3 py-1.5 text-[20px] font-medium uppercase tracking-label text-accent backdrop-blur-sm">
                 Simulation 2 · Russian Wave 2 Re-entry · Same Axis
               </div>
-              <h2 className="mt-4 text-[64px] font-black leading-[1.05] tracking-heading text-fg drop-shadow-lg">
+              <h2 className="mt-4 text-[68px] font-black leading-[1.05] tracking-heading text-fg drop-shadow-lg">
                 2제대가 같은 축선으로 다시 온다 —
                 <br />
                 <span className="text-accent">Traceability 가 잡아낼까?</span>
               </h2>
               {step === 0 && (
-                <div className="mt-5 font-mono text-[14px] uppercase tracking-[0.25em] text-accent/80">
+                <div className="mt-5 font-mono text-[16px] uppercase tracking-[0.25em] text-accent/80">
                   ▸ space — play video
                 </div>
               )}
@@ -107,13 +107,13 @@ export default function S18_InfoGap({ meta, active, step }: SlideProps) {
                   transition={{ duration: 0.5, delay: i * 0.15 }}
                   className="rounded-card border border-accent/40 bg-black/78 px-6 py-5 backdrop-blur-sm"
                 >
-                  <div className="font-mono text-[16px] font-bold uppercase tracking-label text-accent">
+                  <div className="font-mono text-[18px] font-bold uppercase tracking-label text-accent">
                     {g.tag}
                   </div>
-                  <div className="mt-2 text-[26px] font-black leading-[1.2] text-fg">
+                  <div className="mt-2 text-[30px] font-black leading-[1.2] text-fg">
                     {g.head}
                   </div>
-                  <div className="mt-3 text-[19px] leading-[1.55] text-fg-muted">
+                  <div className="mt-3 text-[22px] leading-[1.55] text-fg-muted">
                     {g.body}
                   </div>
                 </motion.div>
@@ -132,7 +132,7 @@ export default function S18_InfoGap({ meta, active, step }: SlideProps) {
               transition={{ duration: 0.55, delay: 0.55 }}
               className="mt-auto self-center rounded-card border border-border bg-black/85 px-6 py-3 backdrop-blur-sm"
             >
-              <div className="text-[22px] text-fg">
+              <div className="text-[26px] text-fg">
                 <span className="text-fg-muted">같은 드론 피드 + Foundry Traceability · </span>
                 <span className="font-bold text-accent">
                   S-DOT 의 판단이 실제 현장과 부합하는지 — 다음 장에서 확인.

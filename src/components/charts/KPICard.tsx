@@ -33,13 +33,13 @@ export default function KPICard({
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       {/* 라벨 */}
-      <div className="mb-4 text-[20px] uppercase tracking-label text-fg-dim">
+      <div className="mb-4 text-[22px] uppercase tracking-label text-fg-dim">
         {label}
       </div>
 
       {/* 수치 + 단위 */}
       <div className="flex items-baseline gap-2 leading-none">
-        <span className="text-[64px] font-extrabold text-fg">
+        <span className="text-[72px] font-extrabold text-fg">
           <CountUp
             to={value}
             active={active}
@@ -47,7 +47,7 @@ export default function KPICard({
             format={format ?? ((v) => Math.round(v).toLocaleString("ko-KR"))}
           />
         </span>
-        <span className="text-[20px] text-fg-muted">{unit}</span>
+        <span className="text-[24px] text-fg-muted">{unit}</span>
       </div>
     </motion.div>
   );

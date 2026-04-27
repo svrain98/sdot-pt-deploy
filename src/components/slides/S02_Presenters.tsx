@@ -10,25 +10,25 @@ const PRESENTERS = [
     name: "이선경",
     org: "육군정보통신학교 AI교관",
     role: "아이디어 제안",
-    photo: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/5af328a4-0212-446d-54c1-cee5d3f32300/public",
+    photo: "/images/presenters/presenter_1.jpg",
   },
   {
     name: "박민규",
     org: "모프시스템즈 CEO",
     role: "프로젝트 리드",
-    photo: "/images/presenters/park_mingyu.png",
+    photo: "/images/presenters/presenter_2.png",
   },
   {
     name: "박윤서",
     org: "모프시스템즈 엔지니어",
     role: "시스템 개발",
-    photo: "/images/presenters/park_yunseo.png",
+    photo: "/images/presenters/presenter_3.jpg",
   },
   {
     name: "최강근",
     org: "익시드테크 CEO",
     role: "전술 지원 및 개발",
-    photo: "https://imagedelivery.net/csS3I11UbX4B6HoDdrP-iA/bfe4858f-a736-4a15-d0a7-5a2242bdaa00/public",
+    photo: "/images/presenters/presenter_4.png",
   },
 ];
 
@@ -78,7 +78,7 @@ export default function S02_Presenters({ meta, active }: SlideProps) {
               {/* 소속 */}
               <p className="mt-1 text-[20px] text-fg-muted">{p.org}</p>
               {/* 역할 */}
-              <p className="mt-1 text-[20px] text-accent">{p.role}</p>
+              <p className="mt-1 text-[20px] font-bold text-accent">{p.role}</p>
             </motion.div>
           ))}
         </div>
