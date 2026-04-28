@@ -10,7 +10,7 @@ export const SLIDE_META: SlideMeta[] = [
   { id: "S02", number: 2, title: "발표자 소개", subtitle: "팀 소개", presenter: "instructor", duration: "15s", steps: 1, notes: "4인 사진 카드." },
   { id: "S03", number: 3, title: "질문", subtitle: "", presenter: "instructor", duration: "10s", steps: 1, notes: "순수 블랙 + 질문. 3~4초 침묵 유도." },
   { id: "S04", number: 4, title: "전장 네트워크의 구조적 한계", subtitle: "SAMS 인용 + 3가지 문제", presenter: "instructor", duration: "1'30\"", steps: 4, notes: "타이틀+SAMS → 카드 순차 활성화." },
-  { id: "S05", number: 5, title: "전술 AI가 나아가는 방향", subtitle: "Parameters + IEEE MILCOM", presenter: "instructor", duration: "55s", steps: 3, notes: "step0: 좌카드 / step1: 우카드 / step2: 결론." },
+  { id: "S05", number: 5, title: "전술 AI가 나아가는 방향", subtitle: "Parameters + IEEE MILCOM", presenter: "instructor", duration: "55s", steps: 2, notes: "step0: 헤더+학술인용+그래프 / step1: 실증 사례 3열." },
   { id: "S06", number: 6, title: "영상이 아닌 '의미'를 전송한다", subtitle: "패러다임 전환", presenter: "instructor", duration: "1'00\"", steps: 2, notes: "Before→After 타이포 + 3줄 설명." },
   { id: "S07", number: 7, title: "S-DOT 시스템 개념도", subtitle: "Edge · Network · C2", presenter: "instructor", duration: "1'00\"", steps: 4, notes: "step0~2: L1~L3 / step3: 하단 파이프라인." },
   { id: "S08", number: 8, title: "데모 구현 조건", subtitle: "구현 범위 및 제한사항", presenter: "instructor", duration: "1'00\"", steps: 2, notes: "step0: 4조건 / step1: 하단 가능성 메시지." },
