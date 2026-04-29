@@ -57,10 +57,10 @@ export default function S08_DemoConditions({ meta, active, step }: SlideProps) {
           className="mt-8 bg-bg-panel rounded-card border border-accent/30 p-7 text-center"
         >
           <p className="text-[44px] text-fg-muted leading-[1.2]">
-            한국군 전투 데이터 · 교리 · 온톨로지 · C4I가 갖춰진다면
+            한국군 전투 데이터 · 교리 · 온톨로지 · C4I 체계 적용 시
           </p>
           <p className="mt-2 text-[44px] font-bold text-accent">
-            S-DOT는 동일한 파이프라인으로 전장에 적용될 수 있습니다.
+            동일한 방식으로 실전 확장이 가능합니다.
           </p>
         </motion.div>
       </div>

@@ -10,17 +10,20 @@ const PROBLEMS = [
   {
     title: "대역폭 한계",
     subtitle: "TICN(최대 45Mbps)",
-    body: "드론·로봇 등 고해상도 감시장비 폭증\n →  제한된 대역폭으로 수용 제한",
+    cause: "드론·로봇 등 고해상도 감시장비 폭증",
+    effect: "제한된 대역폭으로 수용 제한",
   },
   {
     title: "전자전 위협",
     subtitle: "적 방향탐지 · 전파 교란",
-    body: "통신 노드가 적의 우선 표적\n →  송수신 데이터 최소화 필요",
+    cause: "통신 노드가 적의 우선 표적",
+    effect: "송수신 데이터 최소화 필요",
   },
   {
     title: "정보 과부하",
     subtitle: "센서 폭증 · 처리 한계",
-    body: "수십 대 센서 동시 전송\n →  실시간 처리 한계, 선별 전달 필요",
+    cause: "수십 대 센서 동시 전송",
+    effect: "실시간 처리 한계, 선별 전달 필요",
   },
 ];
 
@@ -95,8 +98,10 @@ export default function S04_Problem({ meta, active, step }: SlideProps) {
               <p className="mt-2 text-[24px] text-fg-dim">
                 {p.subtitle}
               </p>
-              <p className="mt-6 text-[28px] leading-[1.6] whitespace-pre-line">
-                {p.body}
+              <p className="mt-6 text-[28px] leading-[1.6] text-fg-muted">
+                {p.cause}
+                <br />
+                <span className="font-bold text-accent">→</span> {p.effect}
               </p>
             </motion.div>
           ))}

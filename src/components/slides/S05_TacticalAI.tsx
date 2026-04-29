@@ -11,17 +11,20 @@ const CASES = [
   {
     label: "SemFil-P",
     sub: "MILCOM 2024 | 세계 최대 군 통신 학술대회",
-    body: "시맨틱 필터링 → 전술망 트래픽 대폭 절감",
+    cause: "시맨틱 필터링",
+    effect: "전술망 트래픽 대폭 절감",
   },
   {
     label: "NGC2 · AIDP",
     sub: "미 육군 | AI 기반 차세대 지휘통제 실증 프로그램",
-    body: "AI가 핵심 데이터 선별 → 결심 지원",
+    cause: "AI가 핵심 데이터 선별",
+    effect: "결심 지원",
   },
   {
     label: "Maven Smart System",
     sub: "미 국방부 | AI 드론 영상 자동 분석",
-    body: "드론 영상 분석 12시간 → 1분 미만 단축",
+    cause: "드론 영상 분석 12시간",
+    effect: "1분 미만 단축",
   },
 ];
 
@@ -160,12 +163,12 @@ export default function S05_TacticalAI({ meta, active, step }: SlideProps) {
           </div>
         </motion.div>
 
-        {/* ③ 실증 사례 3열 */}
+        {/* ③ 실증 사례 3열 — 처음엔 흐리게(0.15), step 1에 선명 (S04 방식) */}
         <motion.div
           className="mt-6 grid grid-cols-3 gap-8"
           initial={{ opacity: 0, y: 14 }}
           animate={active
-            ? { opacity: step >= 1 ? 1 : 0, y: step >= 1 ? 0 : 14 }
+            ? { opacity: step >= 1 ? 1 : 0.15, y: 0 }
             : { opacity: 0, y: 14 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
@@ -173,7 +176,10 @@ export default function S05_TacticalAI({ meta, active, step }: SlideProps) {
             <div key={item.label} className="bg-bg-panel rounded-card border border-border p-8 flex flex-col">
               <h3 className="text-[32px] font-bold text-accent leading-none">{item.label}</h3>
               <p className="mt-2 text-[24px] text-fg-dim">{item.sub}</p>
-              <p className="mt-4 text-[28px] text-fg-muted leading-[1.5]">{item.body}</p>
+              <p className="mt-4 text-[28px] text-fg-muted leading-[1.5]">
+                {item.cause}{" "}
+                <span className="font-bold text-accent">→</span> {item.effect}
+              </p>
             </div>
           ))}
         </motion.div>
